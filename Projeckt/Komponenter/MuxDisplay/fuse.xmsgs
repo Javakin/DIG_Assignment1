@@ -5,5 +5,11 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="error" file="HDLCompiler" num="410" delta="unknown" >"D:/Git/DIG_Assignment1/Projeckt/Komponenter/MuxDisplay/TEST_MuxDisplay.vhd" Line 31: Expression has <arg fmt="%d" index="1">8</arg> elements ; expected <arg fmt="%d" index="2">6</arg>
+</msg>
+
+<msg type="error" file="Simulator" num="777" delta="unknown" >Static elaboration of top level VHDL design unit <arg fmt="%s" index="1">test_muxdisplay</arg> in library <arg fmt="%s" index="2">work</arg> failed
+</msg>
+
 </messages>
 

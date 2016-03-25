@@ -62,7 +62,7 @@ PROCESS(CLK_1K)
 	END PROCESS;
 	
 AN <= seg_no;
-
+ 
 -- Mux-segment that switches between segment values
 ---------------------------------------------------------------------------------
 WITH seg_no SELECT

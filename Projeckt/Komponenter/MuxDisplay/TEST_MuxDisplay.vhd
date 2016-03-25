@@ -15,25 +15,25 @@ ARCHITECTURE behavior OF TEST_MuxDisplay IS
  
     COMPONENT MuxDisplay
     PORT(
-         CLK_1K : IN  std_logic;
-         DOTS : IN  std_logic_vector(3 downto 0);
-         SEC : IN  std_logic_vector(7 downto 0);
-         MIN : IN  std_logic_vector(7 downto 0);
-         AN : OUT  std_logic_vector(3 downto 0);
-         SEG : OUT  std_logic_vector(6 downto 0)
+         CLK_1K 	: IN  	std_logic;
+         DOTS 		: IN  	std_logic_vector(3 downto 0);
+         SEC 		: IN  	std_logic_vector(7 downto 0);
+         MIN 		: IN  	std_logic_vector(7 downto 0);
+         AN 		: OUT  	std_logic_vector(3 downto 0);
+         SEG 		: OUT  	std_logic_vector(6 downto 0)
         );
     END COMPONENT;
     
 
    --Inputs
    signal CLK_1K : std_logic := '0';
-   signal DOTS : std_logic_vector(3 downto 0) := (others => '0');
-   signal SEC : std_logic_vector(5 downto 0) := (others => '0');
-   signal MIN : std_logic_vector(5 downto 0) := (others => '0');
+   signal DOTS : std_logic_vector(3 downto 0) := "0010";
+   signal SEC 	: std_logic_vector(5 downto 0) := "00010010";
+   signal MIN 	: std_logic_vector(5 downto 0) := "00110100";
 
  	--Outputs
-   signal AN : std_logic_vector(3 downto 0);
-   signal SEG : std_logic_vector(6 downto 0);
+   signal AN 	: std_logic_vector(3 downto 0);
+   signal SEG 	: std_logic_vector(6 downto 0);
 
    -- Clock period definitions
    constant CLK_1K_period : time := 1 ms;
@@ -49,7 +49,7 @@ BEGIN
           AN => AN,
           SEG => SEG
         );
-
+ 
    -- Clock process definitions
    CLK_1K_process :process
    begin
