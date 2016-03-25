@@ -49,6 +49,9 @@ SIGNAL seg_no	: STD_LOGIC_VECTOR (3 DOWNTO 0) := (3 => '0', OTHERS => '1');
 -- contains the value of current number
 signal numb		: STD_LOGIC_VECTOR (3 DOWNTO 0);
 
+-- contains the segment value of current number
+signal digit	: STD_LOGIC_VECTOR (6 DOWNTO 0);
+
 begin
 
 -- Process to swich between segment anode
@@ -71,7 +74,26 @@ WITH seg_no SELECT
 				MIN(3 downto 0)  	WHEN "1011",
 				MIN(7 downto 4) 	WHEN OTHERS;
 
-
+-- Mux-segment that converts value to 7-segment value
+---------------------------------------------------------------------------------
+WITH numb SELECT
+	digit <=	"0000001" WHEN "0000",
+				"1001111" WHEN "0001",
+				"0010010" WHEN "0010",
+				"0000110" WHEN "0011",
+				"1001100" WHEN "0100",
+				"0100100" WHEN "0101",
+				"0100000" WHEN "0110",
+				"0001111" WHEN "0111",
+				"0000000" WHEN "1000",
+				"0000100" WHEN "1001",
+				"0001000" WHEN "1010",
+				"1100000" WHEN "1011",
+				"1100000" WHEN "1100",
+				"0110001" WHEN "1101",
+				"1000010" WHEN "1110",
+				"0110000" WHEN "1111",
+				"1111111" WHEN OTHERS;
 
 end Behavioral;
 
