@@ -37,7 +37,7 @@ entity MuxDisplay is
            SEC 	: in  	STD_LOGIC_VECTOR (7 downto 0);
            MIN 	: in  	STD_LOGIC_VECTOR (7 downto 0);
            AN 		: out  	STD_LOGIC_VECTOR (3 downto 0);
-           SEG 	: out  	STD_LOGIC_VECTOR (6 downto 0));
+           SEG 	: out  	STD_LOGIC_VECTOR (7 downto 0));
 end MuxDisplay;
 
 architecture Behavioral of MuxDisplay is
@@ -53,7 +53,7 @@ signal numb		: STD_LOGIC_VECTOR (3 DOWNTO 0);
 signal digit	: STD_LOGIC_VECTOR (6 DOWNTO 0);
 
 -- contains the current dot value
-signal dot	: STD_LOGIC;
+signal dot		: STD_LOGIC;
 
 begin
 
@@ -105,7 +105,10 @@ WITH seg_no SELECT
 				DOTS(1)  WHEN "1101",
 				DOTS(2)  WHEN "1011",
 				DOTS(3)  WHEN OTHERS;
-				
+			
+-- combine signals at the end
+----------------------------------------------------------------------------------------------
+SEG 	<= DOT & DIGIT;
 
 end Behavioral;
 
