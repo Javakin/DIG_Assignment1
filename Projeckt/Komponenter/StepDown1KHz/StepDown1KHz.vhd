@@ -51,7 +51,7 @@ StepDown1K :
 Process (CLK_50MHz)
 	begin
 		if rising_edge(CLK_50MHz) then
-			if prescaler < "101" then
+			if prescaler < "110000110101000" then
 				prescaler 	<= prescaler + 1;
 			else
 				prescaler 	<= (0 => '1', others => '0');

@@ -27,7 +27,7 @@ ARCHITECTURE behavior OF TEST_StepDown1KHZ IS
    signal CLK_1KHz 	: std_logic;
 
    -- Clock period definitions
-   constant CLK_50MHz_period 	: time := 10 ns;
+   constant CLK_50MHz_period 	: time := 20 ns;
 
  
 BEGIN
