@@ -15,7 +15,7 @@ ARCHITECTURE behavior OF TEST_StepDown1KHZ IS
     COMPONENT StepDown1KHz
     PORT(
          CLK_50MHz 	: IN  std_logic;
-         CLK_1KHZ 	: OUT  std_logic
+         CLK_1KHz 	: OUT  std_logic
         );
     END COMPONENT;
     
@@ -24,7 +24,7 @@ ARCHITECTURE behavior OF TEST_StepDown1KHZ IS
    signal CLK_50MHz 	: std_logic := '0';
 
  	--Outputs
-   signal CLK_1KHZ 	: std_logic;
+   signal CLK_1KHz 	: std_logic;
 
    -- Clock period definitions
    constant CLK_50MHz_period 	: time := 10 ns;
@@ -35,7 +35,7 @@ BEGIN
 	-- Instantiate the Unit Under Test (UUT)
    uut: StepDown1KHz PORT MAP (
           CLK_50MHz => CLK_50MHz,
-          CLK_1KHZ => CLK_1KHZ
+          CLK_1KHz => CLK_1KHz
         );
 
    -- Clock process definitions
@@ -48,17 +48,6 @@ BEGIN
    end process;
  
 
-   -- Stimulus process
---   stim_proc: process
---   begin		
---      -- hold reset state for 100 ns.
---      wait for 100 ns;	
---
---      wait for CLK_50MHz_period*10;
---
---      -- insert stimulus here 
---
---      wait;
---   end process;
+
 
 END;
