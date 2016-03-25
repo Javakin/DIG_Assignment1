@@ -1,0 +1,29 @@
+Command line:
+   TEST_StepDown1KHZ_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  56587
+
+Sat Mar 26 00:09:57 2016
+
+
+ Elaboration Time: 0.21875 sec
+
+ Current Memory Usage: 863.584 Meg
+
+ Total Signals          : 4
+ Total Nets             : 2
+ Total Signal Drivers   : 2
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 1
+ Total Traceable Variables  : 9
+ Total Scalar Nets and Variables : 363
+Total Line Count : 4
+
+ Total Simulation Time: 0.21875 sec
+
+ Current Memory Usage: 863.584 Meg
+
+Sat Mar 26 00:10:06 2016
+
