@@ -34,8 +34,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity MuxDisplay is
     Port ( CLK_1K : in  	STD_LOGIC;
            DOTS 	: in  	STD_LOGIC_VECTOR (3 downto 0);
-           SEC 	: in  	STD_LOGIC_VECTOR (5 downto 0);
-           MIN 	: in  	STD_LOGIC_VECTOR (5 downto 0);
+           SEC 	: in  	STD_LOGIC_VECTOR (7 downto 0);
+           MIN 	: in  	STD_LOGIC_VECTOR (7 downto 0);
            AN 		: out  	STD_LOGIC_VECTOR (3 downto 0);
            SEG 	: out  	STD_LOGIC_VECTOR (6 downto 0));
 end MuxDisplay;
@@ -45,8 +45,9 @@ architecture Behavioral of MuxDisplay is
 ----------------------------------------------------------------------------------
 -- The segment number
 SIGNAL seg_no	: STD_LOGIC_VECTOR (3 DOWNTO 0) := (3 => '0', OTHERS => '1');
- 
 
+-- contains the value of current number
+signal numb		: STD_LOGIC_VECTOR (3 DOWNTO 0);
 
 begin
 
@@ -62,8 +63,14 @@ PROCESS(CLK_1K)
 	
 AN <= seg_no;
 
--- Swich between values
-----------------------------------------------------------------------------------
+-- Mux-segment that switches between segment values
+---------------------------------------------------------------------------------
+WITH seg_no SELECT
+	numb <= 	SEC(3 downto 0)  	WHEN "1110",
+				SEC(7 downto 4) 	WHEN "1101",
+				MIN(3 downto 0)  	WHEN "1011",
+				MIN(7 downto 4) 	WHEN OTHERS;
+
 
 
 end Behavioral;

@@ -17,8 +17,8 @@ ARCHITECTURE behavior OF TEST_MuxDisplay IS
     PORT(
          CLK_1K : IN  std_logic;
          DOTS : IN  std_logic_vector(3 downto 0);
-         SEC : IN  std_logic_vector(5 downto 0);
-         MIN : IN  std_logic_vector(5 downto 0);
+         SEC : IN  std_logic_vector(7 downto 0);
+         MIN : IN  std_logic_vector(7 downto 0);
          AN : OUT  std_logic_vector(3 downto 0);
          SEG : OUT  std_logic_vector(6 downto 0)
         );
