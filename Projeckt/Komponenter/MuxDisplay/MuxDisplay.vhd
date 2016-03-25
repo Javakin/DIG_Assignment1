@@ -43,9 +43,24 @@ end MuxDisplay;
 architecture Behavioral of MuxDisplay is
 -- Define signals used in component
 ----------------------------------------------------------------------------------
+-- The segment number
+SIGNAL seg_no	: STD_LOGIC_VECTOR (3 DOWNTO 0) := (3 => '0', OTHERS => '1');
+
 
 
 begin
+
+-- Process to swich between segment anode
+----------------------------------------------------------------------------------
+switch_segment : 
+PROCESS(CLK_1K)
+	BEGIN  
+		IF RISING_EDGE(CLK_1K) THEN
+			seg_no <= seg_no(2 DOWNTO 0) & seg_no(3);
+		END IF;
+	END PROCESS;
+	
+AN <= seg_no;
 
 
 end Behavioral;
