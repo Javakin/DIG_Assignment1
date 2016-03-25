@@ -45,7 +45,7 @@ architecture Behavioral of MuxDisplay is
 ----------------------------------------------------------------------------------
 -- The segment number
 SIGNAL seg_no	: STD_LOGIC_VECTOR (3 DOWNTO 0) := (3 => '0', OTHERS => '1');
-
+ 
 
 
 begin
