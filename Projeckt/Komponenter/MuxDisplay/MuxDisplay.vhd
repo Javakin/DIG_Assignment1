@@ -29,6 +29,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+-- Setup ports
+----------------------------------------------------------------------------------
 entity MuxDisplay is
     Port ( CLK_1K : in  	STD_LOGIC;
            DOTS 	: in  	STD_LOGIC_VECTOR (3 downto 0);
@@ -39,9 +41,23 @@ entity MuxDisplay is
 end MuxDisplay;
 
 architecture Behavioral of MuxDisplay is
+-- Define signals used in component
+----------------------------------------------------------------------------------
+
 
 begin
 
 
 end Behavioral;
+
+
+
+
+
+
+
+
+
+
+
 
