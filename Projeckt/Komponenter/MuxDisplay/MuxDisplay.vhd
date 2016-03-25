@@ -52,6 +52,9 @@ signal numb		: STD_LOGIC_VECTOR (3 DOWNTO 0);
 -- contains the segment value of current number
 signal digit	: STD_LOGIC_VECTOR (6 DOWNTO 0);
 
+-- contains the current dot value
+signal dot	: STD_LOGIC;
+
 begin
 
 -- Process to swich between segment anode
@@ -94,6 +97,15 @@ WITH numb SELECT
 				"1000010" WHEN "1110",
 				"0110000" WHEN "1111",
 				"1111111" WHEN OTHERS;
+
+-- Mux-segment that switches between segment dots
+----------------------------------------------------------------------------------------------
+WITH seg_no SELECT
+	dot <= 	DOTS(0)  WHEN "1110",
+				DOTS(1)  WHEN "1101",
+				DOTS(2)  WHEN "1011",
+				DOTS(3)  WHEN OTHERS;
+				
 
 end Behavioral;
 
