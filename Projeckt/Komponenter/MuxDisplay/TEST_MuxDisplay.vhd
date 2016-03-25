@@ -28,8 +28,8 @@ ARCHITECTURE behavior OF TEST_MuxDisplay IS
    --Inputs
    signal CLK_1K : std_logic := '0';
    signal DOTS : std_logic_vector(3 downto 0) := "0010";
-   signal SEC 	: std_logic_vector(5 downto 0) := "00010010";
-   signal MIN 	: std_logic_vector(5 downto 0) := "00110100";
+   signal SEC 	: std_logic_vector(7 downto 0) := "00010010";
+   signal MIN 	: std_logic_vector(7 downto 0) := "00110100";
 
  	--Outputs
    signal AN 	: std_logic_vector(3 downto 0);

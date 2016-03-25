@@ -1,4 +1,4 @@
-Running: D:\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o D:/Git/DIG_Assignment1/Projeckt/Komponenter/MuxDisplay/TEST_MuxDisplay_isim_beh.exe -prj D:/Git/DIG_Assignment1/Projeckt/Komponenter/MuxDisplay/TEST_MuxDisplay_beh.prj TEST_MuxDisplay 
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -o "D:/Git/DIG_Assignment1/Projeckt/Komponenter/MuxDisplay/TEST_MuxDisplay_isim_beh.exe" -prj "D:/Git/DIG_Assignment1/Projeckt/Komponenter/MuxDisplay/TEST_MuxDisplay_beh.prj" "TEST_MuxDisplay" 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
@@ -6,5 +6,14 @@ Determining compilation order of HDL files
 Parsing VHDL file "D:/Git/DIG_Assignment1/Projeckt/Komponenter/MuxDisplay/MuxDisplay.vhd" into library work
 Parsing VHDL file "D:/Git/DIG_Assignment1/Projeckt/Komponenter/MuxDisplay/TEST_MuxDisplay.vhd" into library work
 Starting static elaboration
-ERROR:HDLCompiler:410 - "D:/Git/DIG_Assignment1/Projeckt/Komponenter/MuxDisplay/TEST_MuxDisplay.vhd" Line 31: Expression has 8 elements ; expected 6
-ERROR:Simulator:777 - Static elaboration of top level VHDL design unit test_muxdisplay in library work failed
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling architecture behavioral of entity MuxDisplay [muxdisplay_default]
+Compiling architecture behavior of entity test_muxdisplay
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 5 VHDL Units
+Built simulation executable D:/Git/DIG_Assignment1/Projeckt/Komponenter/MuxDisplay/TEST_MuxDisplay_isim_beh.exe
+Fuse Memory Usage: 29400 KB
+Fuse CPU Usage: 546 ms

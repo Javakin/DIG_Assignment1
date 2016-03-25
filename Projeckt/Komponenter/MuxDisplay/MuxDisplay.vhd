@@ -55,7 +55,7 @@ begin
 ----------------------------------------------------------------------------------
 switch_segment : 
 PROCESS(CLK_1K)
-	BEGIN  
+	BEGIN   
 		IF RISING_EDGE(CLK_1K) THEN
 			seg_no <= seg_no(2 DOWNTO 0) & seg_no(3);
 		END IF;
