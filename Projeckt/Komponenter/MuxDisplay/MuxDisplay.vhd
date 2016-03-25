@@ -28,7 +28,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 -- any Xilinx primitives in this code.
 --library UNISIM;
 --use UNISIM.VComponents.all;
-
+ 
 -- Setup ports
 ----------------------------------------------------------------------------------
 entity MuxDisplay is
