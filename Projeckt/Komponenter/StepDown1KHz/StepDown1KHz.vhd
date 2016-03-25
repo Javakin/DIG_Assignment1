@@ -54,7 +54,7 @@ Process (CLK_50MHz)
 			if prescaler < "101" then
 				prescaler 	<= prescaler + 1;
 			else
-				prescaler 	<= (others => '0');
+				prescaler 	<= (0 => '1', others => '0');
 				output 		<= not output;	
 			end if;
 		end if;
