@@ -62,6 +62,9 @@ PROCESS(CLK_1K)
 	
 AN <= seg_no;
 
+-- Swich between values
+----------------------------------------------------------------------------------
+
 
 end Behavioral;
 

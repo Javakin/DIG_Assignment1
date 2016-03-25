@@ -1,7 +1,7 @@
 
 # PlanAhead Launch Script for Post-Synthesis floorplanning, created by Project Navigator
 
-create_project -name MuxDisplay -dir "D:/Git/DIG_Assignment1/Projeckt/Komponenter/MuxDisplay/planAhead_run_1" -part xc3s500efg320-4
+create_project -name MuxDisplay -dir "D:/Git/DIG_Assignment1/Projeckt/Komponenter/MuxDisplay/planAhead_run_2" -part xc3s500efg320-4
 set_property design_mode GateLvl [get_property srcset [current_run -impl]]
 set_property edif_top_file "D:/Git/DIG_Assignment1/Projeckt/Komponenter/MuxDisplay/MuxDisplay.ngc" [ get_property srcset [ current_run ] ]
 add_files -norecurse { {D:/Git/DIG_Assignment1/Projeckt/Komponenter/MuxDisplay} }
