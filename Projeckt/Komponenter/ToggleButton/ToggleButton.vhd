@@ -40,5 +40,6 @@ architecture Behavioral of ToggleButton is
 begin
 
 
+
 end Behavioral;
 
