@@ -58,16 +58,37 @@ BEGIN
  
 
    -- Stimulus process
---   stim_proc: process
---   begin		
---      -- hold reset state for 100 ns.
---      wait for 100 ns;	
---
---      wait for CLK_period*10;
---
---      -- insert stimulus here 
---
---      wait;
---   end process;
+   stim_proc: process
+   begin		
+      BUTTON <= '0';
+      wait for 1 ms;	
+		
+		BUTTON <= '1';
+      wait for 1 ms;	
+		
+		BUTTON <= '0';
+      wait for 1 ms;	
+		
+		BUTTON <= '1';
+      
+		wait for 20 ms;
+		
+		-- gentagelse
+		BUTTON <= '0';
+      wait for 1 ms;	
+		
+		BUTTON <= '1';
+      wait for 1 ms;	
+		
+		BUTTON <= '0';
+      
+      
+		wait for 20 ms;
+      
+
+      -- insert stimulus here 
+
+      wait;
+   end process;
 
 END;
