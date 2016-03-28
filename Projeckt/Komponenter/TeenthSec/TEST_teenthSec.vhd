@@ -72,9 +72,20 @@ BEGIN
    stim_proc: process
    begin		
       -- hold reset state for 100 ns.
-      wait for 1 ms;	
-
-      
+      wait for 100 ns;	
+		BCD <= "0001";
+		wait for 100 ns;
+      BCD <= "0010";
+		wait for 100 ns;
+		BCD <= "0011";
+		wait for 100 ns;
+		BCD <= "0100";
+		wait for 100 ns;
+		BCD <= "0101";
+		wait for 100 ns;
+		BCD <= "0110";
+		wait for 100 ns;
+		BCD <= "0111";
 
       -- insert stimulus here 
 
