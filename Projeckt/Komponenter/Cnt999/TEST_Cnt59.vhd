@@ -34,16 +34,16 @@ ARCHITECTURE behavior OF TEST_Cnt999 IS
    signal BCD1_10 : std_logic_vector(3 downto 0);
 
    -- Clock period definitions
-   constant CLK_period : time := 10 ns;
+   constant CLK_period : time := 1 ms;
  
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
    uut: Cnt999 PORT MAP (
-          EN => EN,
-          CLK => CLK,
-          CLR => CLR,
-          CARRY => CARRY,
+          EN 		=> EN,
+          CLK 		=> CLK,
+          CLR 		=> CLR,
+          CARRY 	=> CARRY,
           BCD1_10 => BCD1_10
         );
 
