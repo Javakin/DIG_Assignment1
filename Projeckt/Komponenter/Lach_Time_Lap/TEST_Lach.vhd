@@ -27,7 +27,7 @@
 --------------------------------------------------------------------------------
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
-use IEEE.STD_LOGIC_unsigned.all;
+--use IEEE.STD_LOGIC_unsigned.all;
  
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -84,9 +84,27 @@ BEGIN
    begin		
       -- hold reset state for 100 ns.
 
-      wait for 100 us;	
+		wait for 100 ns;	
 		LAP <= '1';
-     
+		wait for 100 ns;	
+		LAP <= '0';
+		wait for 100 ns;	
+		LAP <= '1';
+		wait for 100 ns;	
+		LAP <= '0';
+		wait for 100 ns;	
+		LAP <= '1';
+		wait for 100 ns;	
+		LAP <= '0';
+		wait for 100 ns;	
+		LAP <= '1';
+		wait for 100 ns;	
+		LAP <= '0';
+		wait for 100 ns;	
+		LAP <= '1';
+		wait for 100 ns;	
+		LAP <= '0';
+		
 
       -- insert stimulus here 
 
@@ -96,14 +114,20 @@ BEGIN
 	add_one: process
    begin		
       -- hold reset state for 100 ns.
-	
-
-      -- insert stimulus here 
-		IN_TEENTH 	<= IN_TEENTH + 1;
-		IN_SEC 		<= IN_SEC + 1;
-		IN_MIN 		<= IN_MIN + 1;
-
-      wait for 10 ns;
+		wait for 50 ns;
+		IN_MIN <= "00000010";
+      wait for 50 ns;
+		IN_MIN <= "00000011";
+		wait for 50 ns;
+		IN_MIN <= "00000100";
+		wait for 50 ns;
+		IN_MIN <= "00000101";
+		wait for 50 ns;
+		IN_MIN <= "00000110";
+		wait for 50 ns;
+		IN_MIN <= "00000111";
+		wait for 50 ns;
+		IN_MIN <= "00001000";
 
       wait;
    end process;

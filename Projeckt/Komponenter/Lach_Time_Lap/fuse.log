@@ -9,13 +9,10 @@ Starting static elaboration
 Completed static elaboration
 Compiling package standard
 Compiling package std_logic_1164
-Compiling package std_logic_arith
-Compiling package std_logic_unsigned
 Compiling architecture behavioral of entity Time_Lap_Lach [time_lap_lach_default]
 Compiling architecture behavior of entity test_lach
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
-Compiled 7 VHDL Units
+Compiled 5 VHDL Units
 Built simulation executable D:/Git/DIG_Assignment1/Projeckt/Komponenter/Lach_Time_Lap/TEST_Lach_isim_beh.exe
-Fuse Memory Usage: 33468 KB
-Fuse CPU Usage: 702 ms
+Fuse Memory Usage: 29384 KB
+Fuse CPU Usage: 577 ms

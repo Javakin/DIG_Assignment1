@@ -46,9 +46,9 @@ end Time_Lap_Lach;
 architecture Behavioral of Time_Lap_Lach is
 -- Define lach signals
 ----------------------------------------------------------------------------------
-signal  teenth	: STD_LOGIC_VECTOR ( 3 downto 0);
-signal  sec	 	: STD_LOGIC_VECTOR ( 7 downto 0);
-signal  min 	: STD_LOGIC_VECTOR ( 7 downto 0);
+signal  teenth	: STD_LOGIC_VECTOR ( 3 downto 0):= (others => '0');
+signal  sec	 	: STD_LOGIC_VECTOR ( 7 downto 0):= (others => '0');
+signal  min 	: STD_LOGIC_VECTOR ( 7 downto 0):= (others => '0');
 
 
 
