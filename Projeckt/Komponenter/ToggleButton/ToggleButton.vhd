@@ -41,6 +41,8 @@ signal res 	:   STD_LOGIC	:= '0';
 
 -- Defining constants for statemashine
 -----------------------------------------------------------------------------
+signal State	: STD_LOGIC_VECTOR( 2 downto 0 ) := "000";
+
 constant s0		: STD_LOGIC_VECTOR( 2 downto 0 ) := "000";
 constant s1		: STD_LOGIC_VECTOR( 2 downto 0 ) := "111";
 constant s2		: STD_LOGIC_VECTOR( 2 downto 0 ) := "110";
@@ -64,6 +66,61 @@ PROCESS(CLK)
 
 set 	<= 	'1'   when Q = "1111111111" else '0'; 
 res 	<= 	'1'	when Q = "0000000000" else '0';
+
+
+-- statemashine
+-----------------------------------------------------------------------------
+Statemashine	:
+PROCESS(CLK, set, res)
+	BEGIN
+		if rising_edge(CLK) then
+			-- initiate statemashine
+			if State = s0 then
+				-- state 000 - test for set
+				if set = '1' then
+					State <= s1;
+				end if;
+				
+			elsif State = s1 then
+				-- state 111 - end pulse
+				State <= s2;
+				
+			elsif State = s2 then
+				-- state 110 - wait for release
+				if res = '1' then 
+					State <= s3;
+				end if;
+				
+			elsif State = s3 then
+				-- state 100 - test for set
+				if set = '1' then
+					State <= s4;
+				end if;
+				
+			elsif State = s4 then
+				-- state 011 - end pulse
+					State <= s5;
+				
+			elsif State = s5 then
+				-- state 010 - test for release
+				if res = '1' then 
+					State <= s0;
+				end if;
+				
+			else
+				-- others
+				State <= s0;
+				
+			end if; 
+		end if;
+END PROCESS;
+
+-- Set output
+-----------------------------------------------------------------------------
+TOGGLE 	<=	State(2);
+PULSE		<= State(1);
+DEBOUNCE	<=	State(0);
+
 
 
 end Behavioral;
