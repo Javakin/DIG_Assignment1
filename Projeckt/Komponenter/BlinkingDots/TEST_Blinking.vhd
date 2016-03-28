@@ -25,7 +25,7 @@ ARCHITECTURE behavior OF TEST_Blinking IS
 
    --Inputs
    signal LAP : std_logic := '0';
-   signal START_STOP : std_logic := '0';
+   signal START_STOP : std_logic := '1';
    signal SEC1_10 : std_logic_vector(3 downto 0) := (others => '0');
 
  	--Outputs
@@ -39,18 +39,32 @@ BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
    uut: BlinkingDots PORT MAP (
-          LAP => LAP,
-          START_STOP => START_STOP,
-          SEC1_10 => SEC1_10,
-          DOTS => DOTS
+          LAP 				=> LAP,
+          START_STOP 	=> START_STOP,
+          SEC1_10 		=> SEC1_10,
+          DOTS 			=> DOTS
         );
 
+
+   -- Stimulus process
+   stim_proc2: process
+   begin		 
+      -- hold reset state for 100 ns.
+		wait for 600 ns;	
+		LAP <= '1';
+		wait for 600 ns;	
+		LAP <= '1';
+		
+		
+   end process;
 
 
    -- Stimulus process
    stim_proc: process
-   begin		
+   begin		 
       -- hold reset state for 100 ns.
+		wait for 100 ns;	
+		SEC1_10 <= "0000";
       wait for 100 ns;	
 		SEC1_10 <= "0001";
 		wait for 100 ns;
@@ -65,12 +79,11 @@ BEGIN
 		SEC1_10 <= "0110";
 		wait for 100 ns;
 		SEC1_10 <= "0111";
+		wait for 100 ns;
+		SEC1_10 <= "1000";
+		wait for 100 ns;
+		SEC1_10 <= "1001";
 		
-  --    wait for <clock>_period*10;
-
-      -- insert stimulus here 
-
-      wait;
    end process;
 
 END;

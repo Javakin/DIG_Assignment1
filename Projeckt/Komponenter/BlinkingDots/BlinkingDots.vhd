@@ -19,6 +19,8 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -42,12 +44,38 @@ architecture Behavioral of BlinkingDots is
 -- Internals signals
 ----------------------------------------------------------------------------------
 signal half_second	: STD_LOGIC := '0'; 
-
+signal dp				: STD_LOGIC_VECTOR (3 downto 0):= "1111";
 
 begin
 
 half_second	<= '1'	when SEC1_10 >= "0101"	else '0';
 
+blinking	:
+	PROCESS( START_STOP, LAP, half_second)
+	BEGIN
+		-- all one
+		dp <= "1111";
+		if lap = '1' then
+			if half_second = '0' then
+				dp <= "0000";
+			end if;
+		end if;
+		if START_STOP = '1' then
+			dp(2) <= not dp(2);
+		end if;
+	END PROCESS;
+
+DOTS <= dp;
 
 end Behavioral;
+
+
+
+
+
+
+
+
+
+
 
