@@ -58,13 +58,13 @@ PROCESS( CLK, CLR)
 		elsif rising_edge(CLK) then
 			if EN = '1' then
 				-- add one to number
-				cif1 <= cif1 + 1 mod 10;
-				if cif1 = 0 then 
-					cif10 <= cif10 + 1 mod 10;
-					if cif10 = 0 then
-						cif100 <= cif100 + 1 mod 10;
+				if cif1 = 9 then 
+					if cif10 = 9 then
+						cif100 <= (cif100 + 1) mod 10;
 					end if;
+					cif10 <= (cif10 + 1) mod 10;
 				end if;
+				cif1 <= (cif1 + 1) mod 10;
 			end if;
 			
 		end if; 

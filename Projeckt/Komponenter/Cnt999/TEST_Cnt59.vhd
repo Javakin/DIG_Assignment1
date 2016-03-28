@@ -25,7 +25,7 @@ ARCHITECTURE behavior OF TEST_Cnt999 IS
     
 
    --Inputs
-   signal EN 	: std_logic := '0';
+   signal EN 	: std_logic := '1';
    signal CLK 	: std_logic := '0';
    signal CLR 	: std_logic := '0';
 
@@ -61,9 +61,13 @@ BEGIN
    stim_proc: process
    begin		
       -- hold reset state for 100 ns.
-      wait for 100 ns;	
-
-      wait for CLK_period*10;
+      wait for 5 ms;	
+		EN <= '1';
+		
+		wait for 553 ms;
+		EN <= '0';
+		wait for 50 ms;
+		EN <= '1';
 
       -- insert stimulus here 
 
