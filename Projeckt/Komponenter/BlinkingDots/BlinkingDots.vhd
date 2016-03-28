@@ -34,15 +34,19 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity BlinkingDots is
     Port ( LAP 			: in   STD_LOGIC;
            START_STOP 	: in   STD_LOGIC;
-           1_10SEC 		: in   STD_LOGIC_VECTOR (3 downto 0);
+           SEC1_10 		: in   STD_LOGIC_VECTOR (3 downto 0);
            DOTS 			: out  STD_LOGIC_VECTOR (3 downto 0));
 end BlinkingDots;
 
 architecture Behavioral of BlinkingDots is
 -- Internals signals
 ----------------------------------------------------------------------------------
+signal half_second	: STD_LOGIC := '0'; 
+
 
 begin
+
+half_second	<= '1'	when SEC1_10 > "0101"	else '0';
 
 
 end Behavioral;
