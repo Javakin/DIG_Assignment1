@@ -1,0 +1,29 @@
+Command line:
+   TEST_Lach_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  64225
+
+Mon Mar 28 14:47:19 2016
+
+
+ Elaboration Time: 0.140625 sec
+
+ Current Memory Usage: 862.126 Meg
+
+ Total Signals          : 17
+ Total Nets             : 61
+ Total Signal Drivers   : 10
+ Total Blocks           : 5
+ Total Primitive Blocks : 4
+ Total Processes        : 6
+ Total Traceable Variables  : 10
+ Total Scalar Nets and Variables : 439
+Total Line Count : 15
+
+ Total Simulation Time: 0.171875 sec
+
+ Current Memory Usage: 862.093 Meg
+
+Mon Mar 28 14:48:20 2016
+
