@@ -2,28 +2,28 @@ Command line:
    TEST_ToggleButton_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  59594
+     -socket  61072
 
-Mon Mar 28 01:51:58 2016
+Mon Mar 28 02:45:45 2016
 
 
- Elaboration Time: 0.125 sec
+ Elaboration Time: 0.109375 sec
 
- Current Memory Usage: 862.093 Meg
+ Current Memory Usage: 1019.38 Meg
 
- Total Signals          : 13
- Total Nets             : 17
- Total Signal Drivers   : 8
+ Total Signals          : 14
+ Total Nets             : 20
+ Total Signal Drivers   : 9
  Total Blocks           : 3
  Total Primitive Blocks : 2
- Total Processes        : 5
+ Total Processes        : 9
  Total Traceable Variables  : 15
- Total Scalar Nets and Variables : 396
-Total Line Count : 23
+ Total Scalar Nets and Variables : 399
+Total Line Count : 53
 
- Total Simulation Time: 0.171875 sec
+ Total Simulation Time: 0.28125 sec
 
- Current Memory Usage: 862.061 Meg
+ Current Memory Usage: 1019.35 Meg
 
-Mon Mar 28 01:52:51 2016
+Mon Mar 28 02:46:39 2016
 

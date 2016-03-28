@@ -118,8 +118,9 @@ END PROCESS;
 -- Set output
 -----------------------------------------------------------------------------
 TOGGLE 	<=	State(2);
-PULSE		<= State(1);
-DEBOUNCE	<=	State(0);
+DEBOUNCE	<=	State(1);
+PULSE		<= State(0);
+
 
 
 

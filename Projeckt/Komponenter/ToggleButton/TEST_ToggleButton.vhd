@@ -82,11 +82,35 @@ BEGIN
 		
 		BUTTON <= '0';
       
-      
 		wait for 20 ms;
       
 
       -- insert stimulus here 
+		BUTTON <= '0';
+      wait for 1 ms;	
+		
+		BUTTON <= '1';
+      wait for 1 ms;	
+		
+		BUTTON <= '0';
+      wait for 1 ms;	
+		
+		BUTTON <= '1';
+      
+		wait for 20 ms;
+		
+		-- gentagelse
+		BUTTON <= '0';
+      wait for 1 ms;	
+		
+		BUTTON <= '1';
+      wait for 1 ms;	
+		
+		BUTTON <= '0';
+      
+		wait for 20 ms;
+      
+	
 
       wait;
    end process;
