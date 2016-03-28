@@ -33,7 +33,7 @@ ARCHITECTURE behavior OF TEST_Blinking IS
    -- No clocks detected in port list. Replace <clock> below with 
    -- appropriate port name 
  
-   constant <clock>_period : time := 10 ns;
+  -- constant <clock>_period : time := 10 ns;
  
 BEGIN
  
@@ -45,36 +45,28 @@ BEGIN
           DOTS => DOTS
         );
 
-   -- Clock process definitions
---   <clock>_process :process
---   begin
---		<clock> <= '0';
---		wait for <clock>_period/2;
---		<clock> <= '1';
---		wait for <clock>_period/2;
---   end process;
- 
+
 
    -- Stimulus process
    stim_proc: process
    begin		
       -- hold reset state for 100 ns.
-      wait for 10 ns;	
+      wait for 100 ns;	
 		SEC1_10 <= "0001";
-		wait for 10 ns;
+		wait for 100 ns;
 		SEC1_10 <= "0010";
-		wait for 10 ns;
+		wait for 100 ns;
 		SEC1_10 <= "0011";
-		wait for 10 ns;
+		wait for 100 ns;
 		SEC1_10 <= "0100";
-		wait for 10 ns;
+		wait for 100 ns;
 		SEC1_10 <= "0101";
-		wait for 10 ns;
+		wait for 100 ns;
 		SEC1_10 <= "0110";
-		wait for 10 ns;
+		wait for 100 ns;
 		SEC1_10 <= "0111";
 		
-      wait for <clock>_period*10;
+  --    wait for <clock>_period*10;
 
       -- insert stimulus here 
 

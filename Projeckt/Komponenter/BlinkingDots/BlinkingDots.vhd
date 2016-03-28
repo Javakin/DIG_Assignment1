@@ -46,7 +46,7 @@ signal half_second	: STD_LOGIC := '0';
 
 begin
 
-half_second	<= '1'	when SEC1_10 > "0101"	else '0';
+half_second	<= '1'	when SEC1_10 >= "0101"	else '0';
 
 
 end Behavioral;

@@ -1,0 +1,10 @@
+Command line:
+   TEST_Blinking_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  51911
+
+Mon Mar 28 17:18:12 2016
+
+
+ Elaboration Time: 0.171875 sec
