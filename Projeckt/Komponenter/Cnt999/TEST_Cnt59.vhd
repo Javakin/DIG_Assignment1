@@ -28,7 +28,7 @@ ARCHITECTURE behavior OF TEST_Cnt999 IS
    signal EN 	: std_logic := '1';
    signal CLK 	: std_logic := '0';
    signal CLR 	: std_logic := '0';
-
+	
  	--Outputs
    signal CARRY : std_logic;
    signal BCD1_10 : std_logic_vector(3 downto 0);

@@ -2,14 +2,14 @@ Command line:
    TEST_Cnt999_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  53356
+     -socket  49756
 
-Tue Mar 29 00:25:50 2016
+Tue Mar 29 09:15:53 2016
 
 
- Elaboration Time: 0.09375 sec
+ Elaboration Time: 0.328125 sec
 
- Current Memory Usage: 862.13 Meg
+ Current Memory Usage: 1024.72 Meg
 
  Total Signals          : 13
  Total Nets             : 11
@@ -21,9 +21,9 @@ Tue Mar 29 00:25:50 2016
  Total Scalar Nets and Variables : 390
 Total Line Count : 21
 
- Total Simulation Time: 0.109375 sec
+ Total Simulation Time: 0.34375 sec
 
- Current Memory Usage: 862.106 Meg
+ Current Memory Usage: 867.402 Meg
 
-Tue Mar 29 00:26:34 2016
+Tue Mar 29 09:17:57 2016
 
