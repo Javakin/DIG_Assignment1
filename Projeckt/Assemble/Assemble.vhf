@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : Assemble.vhf
--- /___/   /\     Timestamp : 03/30/2016 16:07:44
+-- /___/   /\     Timestamp : 03/30/2016 16:15:26
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -30,9 +30,9 @@ entity Assemble is
           CLK      : in    std_logic; 
           LAP      : in    std_logic; 
           STARTSOP : in    std_logic; 
-          XLXN_8   : out   std_logic_vector (7 downto 0); 
-          XLXN_9   : out   std_logic_vector (3 downto 0); 
-          XLXN_10  : out   std_logic_vector (7 downto 0));
+          AN       : out   std_logic_vector (3 downto 0); 
+          LED      : out   std_logic_vector (7 downto 0); 
+          SEG      : out   std_logic_vector (7 downto 0));
 end Assemble;
 
 architecture BEHAVIORAL of Assemble is
@@ -175,12 +175,12 @@ begin
                 DOTS(3 downto 0)=>XLXN_57(3 downto 0),
                 MIN(7 downto 0)=>XLXN_59(7 downto 0),
                 SEC(7 downto 0)=>XLXN_58(7 downto 0),
-                AN(3 downto 0)=>XLXN_9(3 downto 0),
-                SEG(7 downto 0)=>XLXN_10(7 downto 0));
+                AN(3 downto 0)=>AN(3 downto 0),
+                SEG(7 downto 0)=>SEG(7 downto 0));
    
    XLXI_10 : TeenthSec
       port map (BCD(3 downto 0)=>XLXN_56(3 downto 0),
-                LED(7 downto 0)=>XLXN_8(7 downto 0));
+                LED(7 downto 0)=>LED(7 downto 0));
    
    XLXI_11 : BlinkingDots
       port map (LAP=>XLXN_55,
