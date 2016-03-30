@@ -1,0 +1,16 @@
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design Assemble.ngc ...
+WARNING:NetListWriters:298 - No output is written to Assemble.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus XLXI_12/Mcompar_output_cmp_lt0000_lut<9
+   : 1> on block Assemble is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus XLXN_57<2 : 0> on block Assemble is not
+   reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file Assemble.edif ...
+ngc2edif: Total memory usage is 83896 kilobytes
+
