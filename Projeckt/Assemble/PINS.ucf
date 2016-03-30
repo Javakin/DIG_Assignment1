@@ -1,3 +1,6 @@
+# clock
+NET "CLK"			LOC = "B8";
+
 # Buttons
 NET "STARTSTOP" LOC = "B18";
 NET "LAP"		LOC = "D18";
