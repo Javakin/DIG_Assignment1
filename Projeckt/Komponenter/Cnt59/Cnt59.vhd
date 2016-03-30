@@ -21,6 +21,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_arith.ALL;
 use IEEE.STD_LOGIC_unsigned.ALL;
+use IEEE.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -50,21 +51,23 @@ begin
 
 -- Process add one to number
 ----------------------------------------------------------------------------------
---counter	: 
---PROCESS( CLK, CLR)
---	BEGIN
---		if CLR = '1' then
---			cif10 <= 0;	cif1 <= 0;
---		elsif rising_edge(CLK) then
---			if EN = '1' then
+counter59	: 
+PROCESS( CLK, CLR)
+	BEGIN
+		if CLR = '1' then
+			cif10 <= 0;	cif1 <= 0;
+		elsif rising_edge(CLK) and EN = '1' then
 --				 add one to number
---				if cif1 = 9 then 
---					cif10 <= (cif10 + 1) mod 6;
---				end if;
---				cif1 <= (cif1 + 1) mod 10;
---			end if;
---		end if; 
---	END PROCESS;
+				if cif1 = 9 then 
+					if cif10 = 5 then
+						cif10 <= 0;
+					else 
+						cif10 <= cif10 + 1;		
+					end if;
+				end if;
+				cif1 <= (cif1 + 1) mod 10;
+		end if; 
+	END PROCESS;
 	
 -- set output
 ----------------------------------------------------------------------------------
