@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : Assemble.vhf
--- /___/   /\     Timestamp : 03/30/2016 17:43:30
+-- /___/   /\     Timestamp : 03/30/2016 19:45:39
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -41,7 +41,6 @@ architecture BEHAVIORAL of Assemble is
    signal XLXN_31   : std_logic;
    signal XLXN_54   : std_logic;
    signal XLXN_55   : std_logic;
-   signal XLXN_56   : std_logic_vector (3 downto 0);
    signal XLXN_57   : std_logic_vector (3 downto 0);
    signal XLXN_58   : std_logic_vector (7 downto 0);
    signal XLXN_59   : std_logic_vector (7 downto 0);
@@ -51,6 +50,7 @@ architecture BEHAVIORAL of Assemble is
    signal XLXN_72   : std_logic_vector (3 downto 0);
    signal XLXN_73   : std_logic_vector (7 downto 0);
    signal XLXN_74   : std_logic_vector (7 downto 0);
+   signal XLXN_75   : std_logic_vector (3 downto 0);
    component ToggleButton
       port ( CLK      : in    std_logic; 
              BUTTON   : in    std_logic; 
@@ -168,7 +168,7 @@ begin
                 LAP=>XLXN_55,
                 OUT_MIN(7 downto 0)=>XLXN_59(7 downto 0),
                 OUT_SEC(7 downto 0)=>XLXN_58(7 downto 0),
-                OUT_TEENTH(3 downto 0)=>XLXN_56(3 downto 0));
+                OUT_TEENTH(3 downto 0)=>XLXN_75(3 downto 0));
    
    XLXI_9 : MuxDisplay
       port map (CLK_1K=>XLXN_54,
@@ -179,12 +179,12 @@ begin
                 SEG(7 downto 0)=>SEG(7 downto 0));
    
    XLXI_10 : TeenthSec
-      port map (BCD(3 downto 0)=>XLXN_56(3 downto 0),
+      port map (BCD(3 downto 0)=>XLXN_75(3 downto 0),
                 LED(7 downto 0)=>LED(0 to 7));
    
    XLXI_11 : BlinkingDots
       port map (LAP=>XLXN_55,
-                SEC1_10(3 downto 0)=>XLXN_56(3 downto 0),
+                SEC1_10(3 downto 0)=>XLXN_72(3 downto 0),
                 START_STOP=>XLXN_31,
                 DOTS(3 downto 0)=>XLXN_57(3 downto 0));
    

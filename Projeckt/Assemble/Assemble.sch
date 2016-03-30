@@ -17,7 +17,6 @@
         <signal name="XLXN_31" />
         <signal name="XLXN_54" />
         <signal name="XLXN_55" />
-        <signal name="XLXN_56(3:0)" />
         <signal name="XLXN_57(3:0)" />
         <signal name="XLXN_58(7:0)" />
         <signal name="XLXN_59(7:0)" />
@@ -27,6 +26,8 @@
         <signal name="XLXN_72(3:0)" />
         <signal name="XLXN_73(7:0)" />
         <signal name="XLXN_74(7:0)" />
+        <signal name="XLXN_75(3:0)" />
+        <signal name="XLXN_76(3:0)" />
         <port polarity="Input" name="STARTSTOP" />
         <port polarity="Input" name="LAP" />
         <port polarity="Input" name="CLEAR" />
@@ -170,12 +171,12 @@
             <blockpin signalname="XLXN_72(3:0)" name="IN_TEENTH(3:0)" />
             <blockpin signalname="XLXN_73(7:0)" name="IN_SEC(7:0)" />
             <blockpin signalname="XLXN_74(7:0)" name="IN_MIN(7:0)" />
-            <blockpin signalname="XLXN_56(3:0)" name="OUT_TEENTH(3:0)" />
+            <blockpin signalname="XLXN_75(3:0)" name="OUT_TEENTH(3:0)" />
             <blockpin signalname="XLXN_58(7:0)" name="OUT_SEC(7:0)" />
             <blockpin signalname="XLXN_59(7:0)" name="OUT_MIN(7:0)" />
         </block>
         <block symbolname="TeenthSec" name="XLXI_10">
-            <blockpin signalname="XLXN_56(3:0)" name="BCD(3:0)" />
+            <blockpin signalname="XLXN_75(3:0)" name="BCD(3:0)" />
             <blockpin signalname="LED(0:7)" name="LED(7:0)" />
         </block>
         <block symbolname="MuxDisplay" name="XLXI_9">
@@ -189,7 +190,7 @@
         <block symbolname="BlinkingDots" name="XLXI_11">
             <blockpin signalname="XLXN_55" name="LAP" />
             <blockpin signalname="XLXN_31" name="START_STOP" />
-            <blockpin signalname="XLXN_56(3:0)" name="SEC1_10(3:0)" />
+            <blockpin signalname="XLXN_72(3:0)" name="SEC1_10(3:0)" />
             <blockpin signalname="XLXN_57(3:0)" name="DOTS(3:0)" />
         </block>
         <block symbolname="StepDown1KHz" name="XLXI_12">
@@ -283,15 +284,6 @@
             <wire x2="1712" y1="1312" y2="1776" x1="1712" />
             <wire x2="2160" y1="1776" y2="1776" x1="1712" />
         </branch>
-        <branch name="XLXN_56(3:0)">
-            <wire x2="2160" y1="1904" y2="1904" x1="2096" />
-            <wire x2="2096" y1="1904" y2="2000" x1="2096" />
-            <wire x2="2672" y1="2000" y2="2000" x1="2096" />
-            <wire x2="2672" y1="1312" y2="1312" x1="2336" />
-            <wire x2="2672" y1="1312" y2="2000" x1="2672" />
-            <wire x2="2752" y1="1264" y2="1264" x1="2672" />
-            <wire x2="2672" y1="1264" y2="1312" x1="2672" />
-        </branch>
         <branch name="XLXN_57(3:0)">
             <wire x2="2640" y1="1776" y2="1776" x1="2544" />
             <wire x2="2640" y1="1488" y2="1776" x1="2640" />
@@ -361,7 +353,10 @@
         <branch name="XLXN_72(3:0)">
             <wire x2="1664" y1="1216" y2="1216" x1="1520" />
             <wire x2="1664" y1="1216" y2="1376" x1="1664" />
-            <wire x2="1824" y1="1376" y2="1376" x1="1664" />
+            <wire x2="1760" y1="1376" y2="1376" x1="1664" />
+            <wire x2="1824" y1="1376" y2="1376" x1="1760" />
+            <wire x2="1760" y1="1376" y2="1904" x1="1760" />
+            <wire x2="2160" y1="1904" y2="1904" x1="1760" />
         </branch>
         <branch name="XLXN_73(7:0)">
             <wire x2="1632" y1="1568" y2="1568" x1="1520" />
@@ -372,6 +367,11 @@
             <wire x2="1664" y1="1904" y2="1904" x1="1520" />
             <wire x2="1824" y1="1504" y2="1504" x1="1664" />
             <wire x2="1664" y1="1504" y2="1904" x1="1664" />
+        </branch>
+        <branch name="XLXN_75(3:0)">
+            <wire x2="2544" y1="1312" y2="1312" x1="2336" />
+            <wire x2="2544" y1="1264" y2="1312" x1="2544" />
+            <wire x2="2752" y1="1264" y2="1264" x1="2544" />
         </branch>
     </sheet>
 </drawing>
