@@ -10,7 +10,6 @@ NET "CLEAR"		LOC = "E18";
 NET "LED<0>" 	LOC = "J14";
 NET "LED<1>" 	LOC = "J15";
 NET "LED<2>" 	LOC = "K15";
-
 NET "LED<3>" 	LOC = "K14";
 NET "LED<4>" 	LOC = "E17";
 NET "LED<5>" 	LOC = "P15";
@@ -42,6 +41,5 @@ NET "SEG<0>"	LOC = "H14";
 
 
 
-# Dot
 
 NET "seg<7>"	LOC = "C17";
