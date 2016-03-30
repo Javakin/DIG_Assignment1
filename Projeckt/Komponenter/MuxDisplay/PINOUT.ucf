@@ -1,3 +1,12 @@
+NET "CLK_1K"	LOC = "B8";
+
+# test
+NET "MIN<0>"	LOC = "B18";
+NET "MIN<1>"	LOC = "D18";
+NET "MIN<2>" 	LOC = "E18";
+NET "MIN<3>"	LOC = "H13";
+
+
 # Anode's
 NET "AN<0>"		LOC = "F17";
 NET "AN<1>"		LOC = "H17";
