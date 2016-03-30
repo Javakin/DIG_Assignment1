@@ -1,0 +1,10 @@
+[Inputs]
+LAP
+=IN_TEENTH[3:0]=
+=IN_SEC[7:0]=
+=IN_MIN[7:0]=
+[Outputs]
+=OUT_TEENTH[3:0]=
+=OUT_SEC[7:0]=
+=OUT_MIN[7:0]=
+[BiDir]

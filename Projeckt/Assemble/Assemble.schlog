@@ -1,0 +1,51 @@
+select figure at 3242 1252 8 -branches -sn=1
+select figure at 3242 1252 8 -branches -all -sn=1
+select figure at 3253 1270 8 -branches -sn=1
+select figure at 3235 1263 8 -branches -sn=1
+select figure at 3235 1263 8 -branches -all -sn=1
+select figure at 3249 1270 8 -branches -sn=1
+select figure at 3035 774 8 -branches -sn=1
+undo
+undo
+undo
+select figure at 3185 1355 8 -branches -sn=1
+select figure at 3142 1270 8 -branches -sn=1
+select figure at 3142 1270 8 -branches -all -sn=1
+select figure at 3188 1266 8 -branches -sn=1
+select figure at 2882 1266 8 -branches -sn=1
+select figure at 3210 1305 8 -branches -sn=1
+select figure at 3249 1258 8 -branches -sn=1
+select figure at 3249 1258 8 -branches -all -sn=1
+set attr NA|XLXN_8(7:0)|Name value LED -sn=1
+undo
+undo
+select figure at 3171 1301 8 -branches -sn=1
+undo
+undo
+undo
+undo
+undo
+undo
+undo
+undo
+undo
+undo
+undo
+select figure at 2932 1857 8 -branches -sn=1
+undo
+undo
+select figure at 3132 1260 8 -branches -sn=1
+select figure at 3104 1268 8 -branches -sn=1
+select figure at 3104 1268 8 -branches -all -sn=1
+select figure at 3206 1359 8 -branches -sn=1
+select figure at 3286 1266 8 -branches -sn=1
+select figure at 3186 1263 8 -branches -sn=1
+select figure at 3186 1263 8 -branches -all -sn=1
+set attr NA|XLXN_8(7:0)|Name value LED(7:0) -sn=1
+select figure at 3190 1422 8 -branches -sn=1
+select figure at 3190 1422 8 -branches -all -sn=1
+set attr NA|XLXN_9(3:0)|Name value AN(3:0) -sn=1
+select figure at 3231 1611 8 -branches -sn=1
+select figure at 3231 1611 8 -branches -all -sn=1
+set attr NA|XLXN_10(7:0)|Name value SEG(7:0) -sn=1
+select figure at 2957 1790 8 -branches -sn=1
