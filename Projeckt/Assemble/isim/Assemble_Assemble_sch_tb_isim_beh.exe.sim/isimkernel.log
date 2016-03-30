@@ -2,14 +2,14 @@ Command line:
    Assemble_Assemble_sch_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  52185
+     -socket  52511
 
-Wed Mar 30 17:05:45 2016
+Wed Mar 30 18:23:40 2016
 
 
- Elaboration Time: 0.140625 sec
+ Elaboration Time: 0.171875 sec
 
- Current Memory Usage: 1023.72 Meg
+ Current Memory Usage: 1023.69 Meg
 
  Total Signals          : 137
  Total Nets             : 227
@@ -21,9 +21,9 @@ Wed Mar 30 17:05:45 2016
  Total Scalar Nets and Variables : 782
 Total Line Count : 134
 
- Total Simulation Time: 5.32813 sec
+ Total Simulation Time: 36 sec
 
- Current Memory Usage: 866.398 Meg
+ Current Memory Usage: 866.374 Meg
 
-Wed Mar 30 17:08:12 2016
+Wed Mar 30 18:27:18 2016
 

@@ -22,7 +22,7 @@ END Assemble_Assemble_sch_tb;
 ARCHITECTURE behavioral OF Assemble_Assemble_sch_tb IS 
 
    COMPONENT Assemble
-   PORT( STARTSOP	:	IN	STD_LOGIC; 
+   PORT( STARTSTOP	:	IN	STD_LOGIC; 
           LAP		:	IN	STD_LOGIC; 
           CLEAR	:	IN	STD_LOGIC; 
           LED		:	OUT	STD_LOGIC_VECTOR (7 DOWNTO 0); 
@@ -31,7 +31,7 @@ ARCHITECTURE behavioral OF Assemble_Assemble_sch_tb IS
           CLK		:	IN	STD_LOGIC);
    END COMPONENT;
 
-   SIGNAL STARTSOP	:	STD_LOGIC := '0';
+   SIGNAL STARTSTOP	:	STD_LOGIC := '0';
    SIGNAL LAP			:	STD_LOGIC := '0';
    SIGNAL CLEAR		:	STD_LOGIC := '0';
    SIGNAL LED			:	STD_LOGIC_VECTOR (7 DOWNTO 0);
@@ -42,7 +42,7 @@ ARCHITECTURE behavioral OF Assemble_Assemble_sch_tb IS
 BEGIN
 
    UUT: Assemble PORT MAP(
-		STARTSOP => STARTSOP, 
+		STARTSTOP => STARTSTOP, 
 		LAP 		=> LAP, 
 		CLEAR 	=> CLEAR, 
 		LED 		=> LED, 
@@ -65,9 +65,9 @@ BEGIN
 -- *** Test Bench - User Defined Section ***
    tb : PROCESS
    BEGIN
-		STARTSOP <= '1';
+		STARTSTOP <= '1';
 		wait for 10 ms;
-		STARTSOP <= '0';
+		STARTSTOP <= '0';
 		
 	
 	
