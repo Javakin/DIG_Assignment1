@@ -43,7 +43,7 @@ architecture Behavioral of StepDown1KHz is
 ----------------------------------------------------------------------------------
 signal prescaler : STD_LOGIC_VECTOR (25 downto 0) := (others => '0');
 signal output	  : STD_LOGIC	:= '0';
-
+ 
 begin
 -- Process stepdown 1/50.000
 ----------------------------------------------------------------------------------
