@@ -84,12 +84,12 @@ BEGIN
 		BCD <= "0101";
 		wait for 100 ns;
 		BCD <= "0110";
-		wait for 100 ns;
+		wait for 1 us;
 		BCD <= "0111";
 
       -- insert stimulus here 
 
-      wait;
+  
    end process;
 
 END;

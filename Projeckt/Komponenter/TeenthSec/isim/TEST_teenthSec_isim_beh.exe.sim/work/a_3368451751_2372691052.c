@@ -52,7 +52,7 @@ LAB6:    *((char **)t1) = &&LAB7;
 
 LAB1:    return;
 LAB4:    xsi_set_current_line(76, ng0);
-    t2 = (t0 + 4612);
+    t2 = (t0 + 4608);
     t5 = (t0 + 2736);
     t6 = (t5 + 56U);
     t7 = *((char **)t6);
@@ -73,7 +73,7 @@ LAB5:    goto LAB4;
 LAB7:    goto LAB5;
 
 LAB8:    xsi_set_current_line(78, ng0);
-    t2 = (t0 + 4616);
+    t2 = (t0 + 4612);
     t5 = (t0 + 2736);
     t6 = (t5 + 56U);
     t7 = *((char **)t6);
@@ -94,7 +94,7 @@ LAB9:    goto LAB8;
 LAB11:    goto LAB9;
 
 LAB12:    xsi_set_current_line(80, ng0);
-    t2 = (t0 + 4620);
+    t2 = (t0 + 4616);
     t5 = (t0 + 2736);
     t6 = (t5 + 56U);
     t7 = *((char **)t6);
@@ -115,7 +115,7 @@ LAB13:    goto LAB12;
 LAB15:    goto LAB13;
 
 LAB16:    xsi_set_current_line(82, ng0);
-    t2 = (t0 + 4624);
+    t2 = (t0 + 4620);
     t5 = (t0 + 2736);
     t6 = (t5 + 56U);
     t7 = *((char **)t6);
@@ -136,7 +136,7 @@ LAB17:    goto LAB16;
 LAB19:    goto LAB17;
 
 LAB20:    xsi_set_current_line(84, ng0);
-    t2 = (t0 + 4628);
+    t2 = (t0 + 4624);
     t5 = (t0 + 2736);
     t6 = (t5 + 56U);
     t7 = *((char **)t6);
@@ -157,7 +157,7 @@ LAB21:    goto LAB20;
 LAB23:    goto LAB21;
 
 LAB24:    xsi_set_current_line(86, ng0);
-    t2 = (t0 + 4632);
+    t2 = (t0 + 4628);
     t5 = (t0 + 2736);
     t6 = (t5 + 56U);
     t7 = *((char **)t6);
@@ -166,7 +166,7 @@ LAB24:    xsi_set_current_line(86, ng0);
     memcpy(t9, t2, 4U);
     xsi_driver_first_trans_fast(t5);
     xsi_set_current_line(87, ng0);
-    t3 = (100 * 1000LL);
+    t3 = (1 * 1000000LL);
     t2 = (t0 + 2160);
     xsi_process_wait(t2, t3);
 
@@ -178,7 +178,7 @@ LAB25:    goto LAB24;
 LAB27:    goto LAB25;
 
 LAB28:    xsi_set_current_line(88, ng0);
-    t2 = (t0 + 4636);
+    t2 = (t0 + 4632);
     t5 = (t0 + 2736);
     t6 = (t5 + 56U);
     t7 = *((char **)t6);
@@ -186,20 +186,11 @@ LAB28:    xsi_set_current_line(88, ng0);
     t9 = *((char **)t8);
     memcpy(t9, t2, 4U);
     xsi_driver_first_trans_fast(t5);
-    xsi_set_current_line(92, ng0);
-
-LAB34:    *((char **)t1) = &&LAB35;
-    goto LAB1;
+    goto LAB2;
 
 LAB29:    goto LAB28;
 
 LAB31:    goto LAB29;
-
-LAB32:    goto LAB2;
-
-LAB33:    goto LAB32;
-
-LAB35:    goto LAB33;
 
 }
 

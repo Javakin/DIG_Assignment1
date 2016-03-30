@@ -6,7 +6,7 @@
         <trait edittrait="all:0" />
     </attr>
     <netlist>
-        <signal name="STARTSOP" />
+        <signal name="STARTSTOP" />
         <signal name="LAP" />
         <signal name="CLEAR" />
         <signal name="LED(0:7)" />
@@ -27,7 +27,7 @@
         <signal name="XLXN_72(3:0)" />
         <signal name="XLXN_73(7:0)" />
         <signal name="XLXN_74(7:0)" />
-        <port polarity="Input" name="STARTSOP" />
+        <port polarity="Input" name="STARTSTOP" />
         <port polarity="Input" name="LAP" />
         <port polarity="Input" name="CLEAR" />
         <port polarity="Output" name="LED(0:7)" />
@@ -132,7 +132,7 @@
         </blockdef>
         <block symbolname="ToggleButton" name="XLXI_1">
             <blockpin signalname="XLXN_54" name="CLK" />
-            <blockpin signalname="STARTSOP" name="BUTTON" />
+            <blockpin signalname="STARTSTOP" name="BUTTON" />
             <blockpin signalname="XLXN_31" name="TOGGLE" />
             <blockpin name="DEBOUNCE" />
             <blockpin name="PULSE" />
@@ -222,10 +222,10 @@
         </instance>
         <instance x="2752" y="1648" name="XLXI_9" orien="R0">
         </instance>
-        <branch name="STARTSOP">
+        <branch name="STARTSTOP">
             <wire x2="384" y1="1168" y2="1168" x1="352" />
         </branch>
-        <iomarker fontsize="28" x="352" y="1168" name="STARTSOP" orien="R180" />
+        <iomarker fontsize="28" x="352" y="1168" name="STARTSTOP" orien="R180" />
         <branch name="LAP">
             <wire x2="384" y1="1568" y2="1568" x1="352" />
         </branch>

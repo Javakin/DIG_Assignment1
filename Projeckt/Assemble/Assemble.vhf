@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : Assemble.vhf
--- /___/   /\     Timestamp : 03/30/2016 17:09:47
+-- /___/   /\     Timestamp : 03/30/2016 17:43:30
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -26,31 +26,31 @@ library UNISIM;
 use UNISIM.Vcomponents.ALL;
 
 entity Assemble is
-   port ( CLEAR    : in    std_logic; 
-          CLK      : in    std_logic; 
-          LAP      : in    std_logic; 
-          STARTSOP : in    std_logic; 
-          AN       : out   std_logic_vector (3 downto 0); 
-          LED      : out   std_logic_vector (0 to 7); 
-          SEG      : out   std_logic_vector (7 downto 0));
+   port ( CLEAR     : in    std_logic; 
+          CLK       : in    std_logic; 
+          LAP       : in    std_logic; 
+          STARTSTOP : in    std_logic; 
+          AN        : out   std_logic_vector (3 downto 0); 
+          LED       : out   std_logic_vector (0 to 7); 
+          SEG       : out   std_logic_vector (7 downto 0));
 end Assemble;
 
 architecture BEHAVIORAL of Assemble is
    attribute BOX_TYPE   : string ;
-   signal XLXN_24  : std_logic;
-   signal XLXN_31  : std_logic;
-   signal XLXN_54  : std_logic;
-   signal XLXN_55  : std_logic;
-   signal XLXN_56  : std_logic_vector (3 downto 0);
-   signal XLXN_57  : std_logic_vector (3 downto 0);
-   signal XLXN_58  : std_logic_vector (7 downto 0);
-   signal XLXN_59  : std_logic_vector (7 downto 0);
-   signal XLXN_63  : std_logic;
-   signal XLXN_65  : std_logic;
-   signal XLXN_67  : std_logic;
-   signal XLXN_72  : std_logic_vector (3 downto 0);
-   signal XLXN_73  : std_logic_vector (7 downto 0);
-   signal XLXN_74  : std_logic_vector (7 downto 0);
+   signal XLXN_24   : std_logic;
+   signal XLXN_31   : std_logic;
+   signal XLXN_54   : std_logic;
+   signal XLXN_55   : std_logic;
+   signal XLXN_56   : std_logic_vector (3 downto 0);
+   signal XLXN_57   : std_logic_vector (3 downto 0);
+   signal XLXN_58   : std_logic_vector (7 downto 0);
+   signal XLXN_59   : std_logic_vector (7 downto 0);
+   signal XLXN_63   : std_logic;
+   signal XLXN_65   : std_logic;
+   signal XLXN_67   : std_logic;
+   signal XLXN_72   : std_logic_vector (3 downto 0);
+   signal XLXN_73   : std_logic_vector (7 downto 0);
+   signal XLXN_74   : std_logic_vector (7 downto 0);
    component ToggleButton
       port ( CLK      : in    std_logic; 
              BUTTON   : in    std_logic; 
@@ -120,7 +120,7 @@ architecture BEHAVIORAL of Assemble is
    
 begin
    XLXI_1 : ToggleButton
-      port map (BUTTON=>STARTSOP,
+      port map (BUTTON=>STARTSTOP,
                 CLK=>XLXN_54,
                 DEBOUNCE=>open,
                 PULSE=>open,
