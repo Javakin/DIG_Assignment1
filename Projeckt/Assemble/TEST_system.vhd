@@ -31,7 +31,7 @@ ARCHITECTURE behavioral OF Assemble_Assemble_sch_tb IS
           CLK		:	IN	STD_LOGIC);
    END COMPONENT;
 
-   SIGNAL STARTSOP	:	STD_LOGIC := '1';
+   SIGNAL STARTSOP	:	STD_LOGIC := '0';
    SIGNAL LAP			:	STD_LOGIC := '0';
    SIGNAL CLEAR		:	STD_LOGIC := '0';
    SIGNAL LED			:	STD_LOGIC_VECTOR (7 DOWNTO 0);
@@ -65,6 +65,12 @@ BEGIN
 -- *** Test Bench - User Defined Section ***
    tb : PROCESS
    BEGIN
+		STARTSOP <= '1';
+		wait for 10 ms;
+		STARTSOP <= '0';
+		
+	
+	
       WAIT; -- will wait forever
    END PROCESS;
 -- *** End Test Bench - User Defined Section ***

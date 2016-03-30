@@ -9,35 +9,20 @@
         <signal name="STARTSOP" />
         <signal name="LAP" />
         <signal name="CLEAR" />
-        <signal name="LED(7:0)" />
+        <signal name="LED(0:7)" />
         <signal name="AN(3:0)" />
         <signal name="SEG(7:0)" />
         <signal name="CLK" />
-        <signal name="XLXN_17" />
-        <signal name="XLXN_19" />
-        <signal name="XLXN_23" />
         <signal name="XLXN_24" />
-        <signal name="XLXN_25" />
-        <signal name="XLXN_26" />
         <signal name="XLXN_31" />
-        <signal name="XLXN_38" />
-        <signal name="XLXN_41" />
-        <signal name="XLXN_49" />
-        <signal name="XLXN_50" />
-        <signal name="XLXN_51" />
-        <signal name="XLXN_52" />
-        <signal name="XLXN_53" />
         <signal name="XLXN_54" />
         <signal name="XLXN_55" />
         <signal name="XLXN_56(3:0)" />
         <signal name="XLXN_57(3:0)" />
         <signal name="XLXN_58(7:0)" />
         <signal name="XLXN_59(7:0)" />
-        <signal name="XLXN_60(3:0)" />
         <signal name="XLXN_63" />
-        <signal name="XLXN_64" />
         <signal name="XLXN_65" />
-        <signal name="XLXN_66" />
         <signal name="XLXN_67" />
         <signal name="XLXN_72(3:0)" />
         <signal name="XLXN_73(7:0)" />
@@ -45,7 +30,7 @@
         <port polarity="Input" name="STARTSOP" />
         <port polarity="Input" name="LAP" />
         <port polarity="Input" name="CLEAR" />
-        <port polarity="Output" name="LED(7:0)" />
+        <port polarity="Output" name="LED(0:7)" />
         <port polarity="Output" name="AN(3:0)" />
         <port polarity="Output" name="SEG(7:0)" />
         <port polarity="Input" name="CLK" />
@@ -191,7 +176,7 @@
         </block>
         <block symbolname="TeenthSec" name="XLXI_10">
             <blockpin signalname="XLXN_56(3:0)" name="BCD(3:0)" />
-            <blockpin signalname="LED(7:0)" name="LED(7:0)" />
+            <blockpin signalname="LED(0:7)" name="LED(7:0)" />
         </block>
         <block symbolname="MuxDisplay" name="XLXI_9">
             <blockpin signalname="XLXN_54" name="CLK_1K" />
@@ -249,10 +234,10 @@
             <wire x2="384" y1="1904" y2="1904" x1="352" />
         </branch>
         <iomarker fontsize="28" x="352" y="1904" name="CLEAR" orien="R180" />
-        <branch name="LED(7:0)">
+        <branch name="LED(0:7)">
             <wire x2="3168" y1="1264" y2="1264" x1="3136" />
         </branch>
-        <iomarker fontsize="28" x="3168" y="1264" name="LED(7:0)" orien="R0" />
+        <iomarker fontsize="28" x="3168" y="1264" name="LED(0:7)" orien="R0" />
         <branch name="AN(3:0)">
             <wire x2="3168" y1="1424" y2="1424" x1="3136" />
         </branch>
