@@ -66,7 +66,7 @@ LAB1:    return;
 LAB2:    xsi_set_current_line(63, ng0);
     t3 = (t0 + 1832U);
     t4 = *((char **)t3);
-    t5 = (9 - 8);
+    t5 = (6 - 5);
     t6 = (t5 * 1U);
     t7 = (0 + t6);
     t3 = (t4 + t7);
@@ -76,19 +76,19 @@ LAB2:    xsi_set_current_line(63, ng0);
     t12 = ((IEEE_P_2592010699) + 4024);
     t14 = (t13 + 0U);
     t15 = (t14 + 0U);
-    *((int *)t15) = 8;
+    *((int *)t15) = 5;
     t15 = (t14 + 4U);
     *((int *)t15) = 0;
     t15 = (t14 + 8U);
     *((int *)t15) = -1;
-    t16 = (0 - 8);
+    t16 = (0 - 5);
     t17 = (t16 * -1);
     t17 = (t17 + 1);
     t15 = (t14 + 12U);
     *((unsigned int *)t15) = t17;
     t8 = xsi_base_array_concat(t8, t11, t12, (char)97, t3, t13, (char)99, t10, (char)101);
-    t17 = (9U + 1U);
-    t18 = (10U != t17);
+    t17 = (6U + 1U);
+    t18 = (7U != t17);
     if (t18 == 1)
         goto LAB5;
 
@@ -97,11 +97,11 @@ LAB6:    t15 = (t0 + 6176);
     t20 = *((char **)t19);
     t21 = (t20 + 56U);
     t22 = *((char **)t21);
-    memcpy(t22, t8, 10U);
+    memcpy(t22, t8, 7U);
     xsi_driver_first_trans_fast(t15);
     goto LAB3;
 
-LAB5:    xsi_size_not_matching(10U, t17, 0);
+LAB5:    xsi_size_not_matching(7U, t17, 0);
     goto LAB6;
 
 }
@@ -129,9 +129,9 @@ static void work_a_1492751440_3212880686_p_1(char *t0)
 LAB0:    xsi_set_current_line(67, ng0);
     t1 = (t0 + 1832U);
     t2 = *((char **)t1);
-    t1 = (t0 + 9955);
+    t1 = (t0 + 9952);
     t4 = 1;
-    if (10U == 10U)
+    if (7U == 7U)
         goto LAB5;
 
 LAB6:    t4 = 0;
@@ -163,7 +163,7 @@ LAB3:    t8 = (t0 + 6240);
 
 LAB5:    t5 = 0;
 
-LAB8:    if (t5 < 10U)
+LAB8:    if (t5 < 7U)
         goto LAB9;
     else
         goto LAB7;
@@ -203,9 +203,9 @@ static void work_a_1492751440_3212880686_p_2(char *t0)
 LAB0:    xsi_set_current_line(68, ng0);
     t1 = (t0 + 1832U);
     t2 = *((char **)t1);
-    t1 = (t0 + 9965);
+    t1 = (t0 + 9959);
     t4 = 1;
-    if (10U == 10U)
+    if (7U == 7U)
         goto LAB5;
 
 LAB6:    t4 = 0;
@@ -237,7 +237,7 @@ LAB3:    t8 = (t0 + 6304);
 
 LAB5:    t5 = 0;
 
-LAB8:    if (t5 < 10U)
+LAB8:    if (t5 < 7U)
         goto LAB9;
     else
         goto LAB7;

@@ -14,8 +14,7 @@ Compiling package std_logic_unsigned
 Compiling architecture behavioral of entity BlinkingDots [blinkingdots_default]
 Compiling architecture behavior of entity test_blinking
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
 Compiled 7 VHDL Units
 Built simulation executable D:/Git/DIG_Assignment1/Projeckt/Komponenter/BlinkingDots/TEST_Blinking_isim_beh.exe
-Fuse Memory Usage: 34388 KB
-Fuse CPU Usage: 624 ms
+Fuse Memory Usage: 33336 KB
+Fuse CPU Usage: 655 ms

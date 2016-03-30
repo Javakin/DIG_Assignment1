@@ -55,13 +55,12 @@ blinking	:
 	BEGIN
 		-- all one
 		dp <= "1111";
-		if lap = '1' then
-			if half_second = '0' then
-				dp <= "0000";
-			end if;
+		if START_STOP = '1' and half_second = '0' then
+			dp <= "1011";		
 		end if;
-		if START_STOP = '1' then
-			dp(2) <= not dp(2);
+		
+		if LAP = '1' then
+			dp <= not dp;
 		end if;
 	END PROCESS;
 

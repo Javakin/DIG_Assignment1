@@ -42,4 +42,4 @@ NET "SEG<0>"	LOC = "H14";
 
 
 
-NET "seg<7>"	LOC = "C17";
+NET "SEG<7>"	LOC = "C17";

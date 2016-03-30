@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "D:/Git/DIG_Assignment1/Projeckt/Assemble/Assemble_Assemble_sch_tb_isim_beh.exe" -prj "D:/Git/DIG_Assignment1/Projeckt/Assemble/Assemble_Assemble_sch_tb_beh.prj" "Assemble_Assemble_sch_tb" 
+-intstyle "ise" -incremental -o "D:/Git/DIG_Assignment1/Projeckt/Assemble/Assemble_Assemble_sch_tb_isim_beh.exe" -prj "D:/Git/DIG_Assignment1/Projeckt/Assemble/Assemble_Assemble_sch_tb_beh.prj" "work.Assemble_Assemble_sch_tb" 
