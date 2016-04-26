@@ -1,0 +1,9 @@
+[Inputs]
+CLK_1K
+=DOTS[3:0]=
+=SEC[7:0]=
+=MIN[7:0]=
+[Outputs]
+=AN[3:0]=
+=SEG[7:0]=
+[BiDir]

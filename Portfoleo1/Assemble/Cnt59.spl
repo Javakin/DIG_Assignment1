@@ -1,0 +1,8 @@
+[Inputs]
+EN
+CLK
+CLR
+[Outputs]
+CARRY
+=BCD59[7:0]=
+[BiDir]

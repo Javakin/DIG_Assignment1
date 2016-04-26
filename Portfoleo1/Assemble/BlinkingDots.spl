@@ -1,0 +1,7 @@
+[Inputs]
+LAP
+START_STOP
+=SEC1_10[3:0]=
+[Outputs]
+=DOTS[3:0]=
+[BiDir]
