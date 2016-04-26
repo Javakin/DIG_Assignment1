@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : Assemble.vhf
--- /___/   /\     Timestamp : 03/30/2016 20:41:14
+-- /___/   /\     Timestamp : 04/26/2016 17:25:47
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: D:\14.7\ISE_DS\ISE\bin\nt64\unwrapped\sch2hdl.exe -intstyle ise -family spartan3e -flat -suppress -vhdl Assemble.vhf -w D:/Git/DIG_Assignment1/Projeckt/Assemble/Assemble.sch
+--Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl D:/Git/DIG_Portfoleo2/Portfoleo1/Assemble/Assemble.vhf -w D:/Git/DIG_Portfoleo2/Portfoleo1/Assemble/Assemble.sch
 --Design Name: Assemble
 --Device: spartan3e
 --Purpose:
