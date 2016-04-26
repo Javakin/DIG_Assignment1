@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -o "D:/Git/DIG_Assignment1/Projeckt/Komponenter/BlinkingDots/TEST_Blinking_isim_beh.exe" -prj "D:/Git/DIG_Assignment1/Projeckt/Komponenter/BlinkingDots/TEST_Blinking_beh.prj" "work.TEST_Blinking" 

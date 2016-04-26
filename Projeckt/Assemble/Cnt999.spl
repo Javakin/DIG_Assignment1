@@ -1,8 +1,0 @@
-[Inputs]
-EN
-CLK
-CLR
-[Outputs]
-CARRY
-=BCD1_10[3:0]=
-[BiDir]
