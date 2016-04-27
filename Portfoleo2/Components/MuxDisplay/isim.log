@@ -11,6 +11,3 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# run 10.00ms
-# run all
-Stopped at time : 1547270500 us : File "D:/Git/DIG_Portfoleo2/Portfoleo2/Components/MuxDisplay/MuxDisplay.vhd" Line 114

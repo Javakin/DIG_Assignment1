@@ -46,6 +46,7 @@ end MuxDisplay;
 architecture Behavioral of MuxDisplay is
 -- Define signals used in component
 ----------------------------------------------------------------------------------
+
 -- The segment number
 SIGNAL seg_no	: STD_LOGIC_VECTOR (3 DOWNTO 0) := (3 => '0', OTHERS => '1');
 
@@ -54,7 +55,7 @@ signal numb		: STD_LOGIC_VECTOR (3 DOWNTO 0);
 
 -- contains the segment value of current number
 signal digit	: STD_LOGIC_VECTOR (6 DOWNTO 0);
-
+ 
 -- contains the current dot value
 signal dot		: STD_LOGIC;
 
