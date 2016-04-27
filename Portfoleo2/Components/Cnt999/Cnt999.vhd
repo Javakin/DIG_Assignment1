@@ -31,9 +31,9 @@ use IEEE.STD_LOGIC_unsigned.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
--- Define ports
+-- Define ports 
 ----------------------------------------------------------------------------------
-entity Cnt9999 is
+entity Cnt999 is
     Port ( EN 		: in   STD_LOGIC;
            CLK 	: in   STD_LOGIC;
            CLR 	: in   STD_LOGIC;
@@ -42,9 +42,9 @@ entity Cnt9999 is
 			  BCD1_100: out  STD_LOGIC_VECTOR (3 downto 0);
 			  BCD1_10: out  STD_LOGIC_VECTOR (3 downto 0);
 			  BCD1_1: out  STD_LOGIC_VECTOR (3 downto 0));
-end Cnt9999;
+end Cnt999;
 
-architecture Behavioral of Cnt9999 is
+architecture Behavioral of Cnt999 is
 -- Internal signals
 ----------------------------------------------------------------------------------
 signal cif1000, cif100, cif10, cif1 	: integer range 0 to 15 := 0;
@@ -59,7 +59,7 @@ PROCESS( CLK, CLR)
 		if CLR = '1' then
 			cif1000 <= 0; cif100 <= 0;	cif10 <= 0;	cif1 <= 0;
 		elsif rising_edge(CLK) then
-			if EN = '1' and (cif1 != 9 and cif10 != 9 and cif100 != 9 and cif1000 != 0) then
+			if (EN = '1' and not (cif1 = 9 and cif10 = 9 and cif100 = 9 and cif1000 = 9)) then
 				-- add one to number
 				if cif1 = 9 then 
 					if cif10 = 9 then
