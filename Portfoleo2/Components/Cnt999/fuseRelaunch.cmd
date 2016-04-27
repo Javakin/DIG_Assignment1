@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "D:/Git/DIG_Assignment1/Projeckt/Komponenter/Cnt999/TEST_Cnt999_isim_beh.exe" -prj "D:/Git/DIG_Assignment1/Projeckt/Komponenter/Cnt999/TEST_Cnt999_beh.prj" "work.TEST_Cnt999" 
