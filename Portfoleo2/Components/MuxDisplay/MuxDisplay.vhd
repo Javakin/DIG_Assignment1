@@ -34,8 +34,11 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity MuxDisplay is
     Port ( CLK_1K : in  	STD_LOGIC;
            DOTS 	: in  	STD_LOGIC_VECTOR (3 downto 0);
-           SEC 	: in  	STD_LOGIC_VECTOR (7 downto 0);
-           MIN 	: in  	STD_LOGIC_VECTOR (7 downto 0);
+           BCD1 	: in  	STD_LOGIC_VECTOR (3 downto 0);
+			  BCD2 	: in  	STD_LOGIC_VECTOR (3 downto 0);
+			  BCD3 	: in  	STD_LOGIC_VECTOR (3 downto 0);
+			  BCD4 	: in  	STD_LOGIC_VECTOR (3 downto 0);
+			  
            AN 		: out  	STD_LOGIC_VECTOR (3 downto 0);
            SEG 	: out  	STD_LOGIC_VECTOR (7 downto 0));
 end MuxDisplay;
@@ -72,10 +75,10 @@ AN <= seg_no;
 -- Mux-segment that switches between segment values
 ---------------------------------------------------------------------------------
 WITH seg_no SELECT
-	numb <= 	SEC(3 downto 0)  	WHEN "1110",
-				SEC(7 downto 4) 	WHEN "1101",
-				MIN(3 downto 0)  	WHEN "1011",
-				MIN(7 downto 4) 	WHEN OTHERS;
+	numb <= 	BCD1(3 downto 0)  	WHEN "1110",
+				BCD2(3 downto 0)  	WHEN "1101",
+				BCD3(3 downto 0)  	WHEN "1011",
+				BCD4(3 downto 0)  	WHEN OTHERS;
 
 -- Mux-segment that converts value to 7-segment value
 ---------------------------------------------------------------------------------

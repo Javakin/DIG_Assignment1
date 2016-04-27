@@ -2,16 +2,16 @@ Command line:
    TEST_MuxDisplay_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  52015
+     -socket  58796
 
-Fri Mar 25 20:32:30 2016
+Wed Apr 27 21:30:32 2016
 
 
- Elaboration Time: 0.109375 sec
+ Elaboration Time: 0.171875 sec
 
- Current Memory Usage: 862.048 Meg
+ Current Memory Usage: 866.234 Meg
 
- Total Signals          : 16
+ Total Signals          : 20
  Total Nets             : 49
  Total Signal Drivers   : 7
  Total Blocks           : 3
@@ -21,9 +21,9 @@ Fri Mar 25 20:32:30 2016
  Total Scalar Nets and Variables : 410
 Total Line Count : 17
 
- Total Simulation Time: 0.140625 sec
+ Total Simulation Time: 5.5625 sec
 
- Current Memory Usage: 862.048 Meg
+ Current Memory Usage: 866.202 Meg
 
-Fri Mar 25 20:32:37 2016
+Wed Apr 27 21:31:59 2016
 

@@ -16,9 +16,13 @@ ARCHITECTURE behavior OF TEST_MuxDisplay IS
     COMPONENT MuxDisplay
     PORT(
          CLK_1K 	: IN  	std_logic;
-         DOTS 		: IN  	std_logic_vector(3 downto 0);
-         SEC 		: IN  	std_logic_vector(7 downto 0);
-         MIN 		: IN  	std_logic_vector(7 downto 0);
+         DOTS 		: IN  	std_logic_vector (3 downto 0);
+         BCD1 		: in  	STD_LOGIC_VECTOR (3 downto 0);
+  		   BCD2 		: in  	STD_LOGIC_VECTOR (3 downto 0);
+		   BCD3 		: in  	STD_LOGIC_VECTOR (3 downto 0);
+		   BCD4 		: in  	STD_LOGIC_VECTOR (3 downto 0);
+			
+			
          AN 		: OUT  	std_logic_vector(3 downto 0);
          SEG 		: OUT  	std_logic_vector(7 downto 0)
         );
@@ -28,8 +32,10 @@ ARCHITECTURE behavior OF TEST_MuxDisplay IS
    --Inputs
    signal CLK_1K : std_logic := '0';
    signal DOTS : std_logic_vector(3 downto 0) := "0010";
-   signal SEC 	: std_logic_vector(7 downto 0) := "00100001";
-   signal MIN 	: std_logic_vector(7 downto 0) := "01000011";
+	signal BCD1	: std_logic_vector(3 downto 0) := "0001";
+	signal BCD2	: std_logic_vector(3 downto 0) := "0010";
+	signal BCD3	: std_logic_vector(3 downto 0) := "0011";
+	signal BCD4	: std_logic_vector(3 downto 0) := "0100";
 
  	--Outputs
    signal AN 	: std_logic_vector(3 downto 0);
@@ -44,8 +50,12 @@ BEGIN
    uut: MuxDisplay PORT MAP (
           CLK_1K => CLK_1K,
           DOTS => DOTS,
-          SEC => SEC,
-          MIN => MIN,
+          BCD1 => BCD1,
+			 BCD2 => BCD2,
+			 BCD3 => BCD3,
+			 BCD4 => BCD4,
+			 
+          
           AN => AN,
           SEG => SEG
         );
