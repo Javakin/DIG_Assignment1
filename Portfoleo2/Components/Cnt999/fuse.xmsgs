@@ -5,5 +5,8 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLCompiler" num="1369" delta="unknown" >"D:/Git/DIG_Portfoleo2/Portfoleo2/Components/Cnt999/TEST_Cnt59.vhd" Line 69: Possible infinite loop; process does not have a wait statement
+</msg>
+
 </messages>
 
