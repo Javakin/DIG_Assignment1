@@ -33,18 +33,21 @@ use IEEE.STD_LOGIC_unsigned.ALL;
 
 -- Define ports
 ----------------------------------------------------------------------------------
-entity Cnt999 is
+entity Cnt9999 is
     Port ( EN 		: in   STD_LOGIC;
            CLK 	: in   STD_LOGIC;
            CLR 	: in   STD_LOGIC;
-           CARRY 	: out  STD_LOGIC;
-           BCD1_10: out  STD_LOGIC_VECTOR (3 downto 0));
-end Cnt999;
+			  
+           BCD1_1000: out  STD_LOGIC_VECTOR (3 downto 0);
+			  BCD1_100: out  STD_LOGIC_VECTOR (3 downto 0);
+			  BCD1_10: out  STD_LOGIC_VECTOR (3 downto 0);
+			  BCD1_1: out  STD_LOGIC_VECTOR (3 downto 0));
+end Cnt9999;
 
-architecture Behavioral of Cnt999 is
+architecture Behavioral of Cnt9999 is
 -- Internal signals
 ----------------------------------------------------------------------------------
-signal cif100, cif10, cif1 	: integer range 0 to 15 := 0;
+signal cif1000, cif100, cif10, cif1 	: integer range 0 to 15 := 0;
 
 begin
 
@@ -54,12 +57,15 @@ counter	:
 PROCESS( CLK, CLR)
 	BEGIN
 		if CLR = '1' then
-			cif100 <= 0;	cif10 <= 0;	cif1 <= 0;
+			cif1000 <= 0; cif100 <= 0;	cif10 <= 0;	cif1 <= 0;
 		elsif rising_edge(CLK) then
-			if EN = '1' then
+			if EN = '1' and (cif1 != 9 and cif10 != 9 and cif100 != 9 and cif1000 != 0) then
 				-- add one to number
 				if cif1 = 9 then 
 					if cif10 = 9 then
+						if cif100 = 9 then
+							cif1000 <= (cif1000 + 1) mod 10;
+						end if;
 						cif100 <= (cif100 + 1) mod 10;
 					end if;
 					cif10 <= (cif10 + 1) mod 10;
@@ -72,10 +78,11 @@ PROCESS( CLK, CLR)
 	
 -- set output
 ----------------------------------------------------------------------------------
-BCD1_10 	<= conv_std_logic_vector(cif100,4);
+BCD1_1000 	<= conv_std_logic_vector(cif1,4);
+BCD1_100 	<= conv_std_logic_vector(cif10,4);
+BCD1_10  	<= conv_std_logic_vector(cif100,4);
+BCD1_1   	<= conv_std_logic_vector(cif1000,4);
 
-CARRY		<= '1' when cif100=9 and cif10=9 and cif1=9 and EN='1' else
-				'0';
 
 end Behavioral;
 
