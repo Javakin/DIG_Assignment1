@@ -79,35 +79,19 @@ PROCESS(LAP, CLEAR, IN_BCD1, IN_BCD2, IN_BCD3, IN_BCD4)
 		end if;	
 	END PROCESS;
 	
--- update high score
+-- Set the output
 ----------------------------------------------------------------------------------
-update_highscore	: 
-PROCESS(LAP )
-	BEGIN
-		if rising_edge(LAP) then
-			-- safe time in lach
-			
-			
-		end if;	
-	END PROCESS;
-
-
-OUT_BCD1 	<= IN_BCD1  			when LAP = '0' else 
-					hs(3 downto 0)		when LAP = '1' and HIGH_SCORE = '1' else
-					bcd(3 downto 0)  	when LAP = '1' and HIGH_SCORE = '0';
+OUT_BCD1 	<= hs(3 downto 0)		when HIGH_SCORE = '1' else
+					bcd(3 downto 0)  	when LAP = '1' else IN_BCD1;
 					
-OUT_BCD2		<= IN_BCD2  			when LAP = '0' else 
-					hs(7 downto 4)		when LAP = '1' and HIGH_SCORE = '1' else
-					bcd(7 downto 4)  	when LAP = '1' and HIGH_SCORE = '0';
+OUT_BCD2		<= hs(7 downto 4)		when HIGH_SCORE = '1' else
+					bcd(7 downto 4)  	when LAP = '1' else IN_BCD2;
 
-OUT_BCD3 	<= IN_BCD3  			when LAP = '0' else 
-					hs(11 downto 8) 	when LAP = '1' and HIGH_SCORE = '1' else
-					bcd(11 downto 8)  when LAP = '1' and HIGH_SCORE = '0';
+OUT_BCD3 	<=	hs(11 downto 8) 	when HIGH_SCORE = '1' else
+					bcd(11 downto 8)  when LAP = '1' else IN_BCD3;
 					
-OUT_BCD4 	<= IN_BCD4  			when LAP = '0' else 
-					hs(15 downto 12)	when LAP = '1' and HIGH_SCORE = '1' else
-					bcd(15 downto 12) when LAP = '1' and HIGH_SCORE = '0';
-
+OUT_BCD4 	<= hs(15 downto 12)	when HIGH_SCORE = '1' else
+					bcd(15 downto 12) when LAP = '1' else IN_BCD4;
 
 end Behavioral;
 
