@@ -64,6 +64,7 @@ signal state : STD_LOGIC_VECTOR (2 downto 0) := "001";
 -- Q(0) is LAP
 -- Q(1) is CLEAR_TIME
 -- Q(2) is LED
+----------------------------------------------------------------------------------
 constant Stop_state 		 : STD_LOGIC_VECTOR (2 downto 0) := "001";
 constant Start_state 	 : STD_LOGIC_VECTOR (2 downto 0) := "010";
 constant Release_state   : STD_LOGIC_VECTOR (2 downto 0) := "000";
@@ -71,16 +72,17 @@ constant RT_passed_state : STD_LOGIC_VECTOR (2 downto 0) := "100";
 
 
 begin
-
+-- Define constants
+----------------------------------------------------------------------------------
 tin <= TIN4 & TIN3 & TIN2 & TIN1;
 btn <= START_TOGGLE & START_DEBOUNCE;
 
-stuff: 
+State_mashine : 
 process (CLK)
 	begin
 		if CLEAR = '1' then 
 			-- clear all
-			
+			tout <= (others => '0');
 		elsif (rising_edge(CLK)) then
 			-- execute states
 			
