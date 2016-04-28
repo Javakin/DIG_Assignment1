@@ -109,32 +109,56 @@ BEGIN
 --   end process;
  
 
-   -- Stimulus process
-   stim_proc: process
+
+
+ -- Stimulus process1
+   stim_proc1: process
    begin		
-      -- hold reset state for 100 ns.
+
       wait for 1 ms;	
+      IN_BCD3 <= (IN_BCD3 + 1);
 
-      IN_BCD4 <= IN_BCD4 + 1;
-		wait for 1 ms;
-		IN_BCD4 <= IN_BCD4 + 1;
-		wait for 1 ms;
-		IN_BCD4 <= IN_BCD4 + 1;
-		wait for 1 ms;
-		IN_BCD4 <= IN_BCD4 + 1;
-		wait for 1 ms;
-		IN_BCD4 <= IN_BCD4 + 1;
-		wait for 1 ms;
-		IN_BCD4 <= IN_BCD4 + 1;
-		wait for 1 ms;
-		
-		HIGH_SCORE <= '1';
-		
-		wait for 2 ms;
-		HIGH_SCORE <= '0';
-		
+   end process;
+	
+	 -- Stimulus process2
+   stim_proc2: process
+   begin		
 
-      -- insert stimulus here
+      wait for 10 ms;	
+      IN_BCD4 <= (IN_BCD4 + 1);
+
+   end process;
+	
+	 -- Stimulus process3
+   stim_proc3: process
+   begin		
+
+      wait for 50 ms;	
+      LAP <= '1';
+		
+		wait for 10 ms;
+		LAP <= '0';
+		
+		wait for 100 ms;
+		wait for 30 ms;
+      LAP <= '1';
+		
+		wait for 10 ms;
+		LAP <= '0';
+		
+		wait for 120 ms;
+		wait for 10 ms;
+      LAP <= '1';
+		
+		wait for 10 ms;
+		LAP <= '0';
+		
+--		wait for 6 ms; 
+--		CLEAR <= '1';
+--		wait for 5 ms;
+--		CLEAR <= '0';
+		
+		
    end process;
 
 END;

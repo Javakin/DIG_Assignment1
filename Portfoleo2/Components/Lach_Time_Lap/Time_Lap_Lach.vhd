@@ -72,7 +72,7 @@ PROCESS(LAP, CLEAR, IN_BCD1, IN_BCD2, IN_BCD3, IN_BCD4)
 			bcd		<= IN_BCD4 & IN_BCD3 & IN_BCD2 & IN_BCD1;
 
 			-- check for new highscore
-			if hs > bcd then
+			if hs > (IN_BCD4 & IN_BCD3 & IN_BCD2 & IN_BCD1) then
 				-- Update highscore
 				hs 	<= IN_BCD4 & IN_BCD3 & IN_BCD2 & IN_BCD1;
 			end if;			
