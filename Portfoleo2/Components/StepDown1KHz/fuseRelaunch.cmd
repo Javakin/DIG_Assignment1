@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "D:/Git/DIG_Portfoleo2/Portfoleo2/Components/StepDown1KHz/TEST_StepDown1KHZ_isim_beh.exe" -prj "D:/Git/DIG_Portfoleo2/Portfoleo2/Components/StepDown1KHz/TEST_StepDown1KHZ_beh.prj" "work.TEST_StepDown1KHZ" 
