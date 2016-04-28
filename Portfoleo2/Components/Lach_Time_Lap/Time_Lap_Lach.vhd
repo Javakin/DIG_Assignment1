@@ -52,29 +52,30 @@ end Time_Lap_Lach;
 architecture Behavioral of Time_Lap_Lach is
 -- Define lach signals
 ----------------------------------------------------------------------------------
-signal  bcd1	: STD_LOGIC_VECTOR ( 3 downto 0 ):= (others => '0');
-signal  bcd2 	: STD_LOGIC_VECTOR ( 3 downto 0 ):= (others => '0');
-signal  bcd3 	: STD_LOGIC_VECTOR ( 3 downto 0 ):= (others => '0');
-signal  bcd4 	: STD_LOGIC_VECTOR ( 3 downto 0 ):= (others => '0');
+signal  bcd	: STD_LOGIC_VECTOR ( 15 downto 0 ):= (others => '0');
 
-signal  hs1	 	: STD_LOGIC_VECTOR ( 3 downto 0 ):= (others => '1');
-signal  hs2 	: STD_LOGIC_VECTOR ( 3 downto 0 ):= (others => '1');
-signal  hs3 	: STD_LOGIC_VECTOR ( 3 downto 0 ):= (others => '1');
-signal  hs4 	: STD_LOGIC_VECTOR ( 3 downto 0 ):= (others => '1');
+-- highscore
+signal  hs	 	: STD_LOGIC_VECTOR ( 15 downto 0 ):= (others => '1');
+
 
 begin
 -- Latch functionality
 ----------------------------------------------------------------------------------
 lach_process	: 
-PROCESS(LAP, IN_BCD1, IN_BCD2, IN_BCD3, IN_BCD4)
+PROCESS(LAP, CLEAR, IN_BCD1, IN_BCD2, IN_BCD3, IN_BCD4)
 	BEGIN
-		if rising_edge(LAP) then
-			-- safe time in lach
-			bcd2		<= IN_BCD2;
-			bcd3		<= IN_BCD3;
-			bcd1  	<= IN_BCD1;
-			bcd4		<= IN_BCD4;
+		if CLEAR = '1' then 
+			hs <= (others => '1');	
 			
+		elsif rising_edge(LAP) then
+			-- freeze the time
+			bcd		<= IN_BCD4 & IN_BCD3 & IN_BCD2 & IN_BCD1;
+
+			-- check for new highscore
+			if hs > bcd then
+				-- Update highscore
+				hs 	<= IN_BCD4 & IN_BCD3 & IN_BCD2 & IN_BCD1;
+			end if;			
 		end if;	
 	END PROCESS;
 	
@@ -91,21 +92,21 @@ PROCESS(LAP )
 	END PROCESS;
 
 
-OUT_BCD1 	<= IN_BCD1  when LAP = '0' else 
-					hs1		when LAP = '1' and HIGH_SCORE = '1' else
-					bcd1  	when LAP = '1' and HIGH_SCORE = '0';
+OUT_BCD1 	<= IN_BCD1  			when LAP = '0' else 
+					hs(3 downto 0)		when LAP = '1' and HIGH_SCORE = '1' else
+					bcd(3 downto 0)  	when LAP = '1' and HIGH_SCORE = '0';
 					
-OUT_BCD2		<= IN_BCD2  when LAP = '0' else 
-					hs2		when LAP = '1' and HIGH_SCORE = '1' else
-					bcd2  	when LAP = '1' and HIGH_SCORE = '0';
+OUT_BCD2		<= IN_BCD2  			when LAP = '0' else 
+					hs(7 downto 4)		when LAP = '1' and HIGH_SCORE = '1' else
+					bcd(7 downto 4)  	when LAP = '1' and HIGH_SCORE = '0';
 
-OUT_BCD3 	<= IN_BCD3  when LAP = '0' else 
-					hs3 		when LAP = '1' and HIGH_SCORE = '1' else
-					bcd1  	when LAP = '1' and HIGH_SCORE = '0';
+OUT_BCD3 	<= IN_BCD3  			when LAP = '0' else 
+					hs(11 downto 8) 	when LAP = '1' and HIGH_SCORE = '1' else
+					bcd(11 downto 8)  when LAP = '1' and HIGH_SCORE = '0';
 					
-OUT_BCD4 	<= IN_BCD4  when LAP = '0' else 
-					hs4		when LAP = '1' and HIGH_SCORE = '1' else
-					bcd4  	when LAP = '1' and HIGH_SCORE = '0';
+OUT_BCD4 	<= IN_BCD4  			when LAP = '0' else 
+					hs(15 downto 12)	when LAP = '1' and HIGH_SCORE = '1' else
+					bcd(15 downto 12) when LAP = '1' and HIGH_SCORE = '0';
 
 
 end Behavioral;
