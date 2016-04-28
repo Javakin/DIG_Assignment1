@@ -44,6 +44,7 @@ entity reaction_game is
            START_DEBOUNCE 	: in  STD_LOGIC;
            START_TOGGLE 	: in  STD_LOGIC;
            CLEAR 				: in  STD_LOGIC;
+			  CLEAR_TIME		: out STD_LOGIC;
            CLK 				: in  STD_LOGIC;
            LED 				: out STD_LOGIC;
            RAND 				: in  STD_LOGIC_VECTOR (15 downto 0));
@@ -56,9 +57,13 @@ architecture Behavioral of reaction_game is
 signal tout : STD_LOGIC_VECTOR (15 downto 0);
 signal tin  : STD_LOGIC_VECTOR (15 downto 0);
 signal btn	: STD_LOGIC;
+signal state : STD_LOGIC_VECTOR (2 downto 0) := "001";
 
 -- Define constants
 ----------------------------------------------------------------------------------
+-- Q(0) is LAP
+-- Q(1) is CLEAR_TIME
+-- Q(2) is LED
 constant Stop_state 		 : STD_LOGIC_VECTOR (2 downto 0) := "001";
 constant Start_state 	 : STD_LOGIC_VECTOR (2 downto 0) := "010";
 constant Release_state   : STD_LOGIC_VECTOR (2 downto 0) := "000";
@@ -73,10 +78,26 @@ btn <= START_TOGGLE & START_DEBOUNCE;
 stuff: 
 process (CLK)
 	begin
-		if (rising_edge(CLK)) then
+		if CLEAR = '1' then 
+			-- clear all
+			
+		elsif (rising_edge(CLK)) then
+			-- execute states
 			
 		end if;
 	end process;
 	
+
+-- set outputs
+----------------------------------------------------------------------------------
+LED 			<= state(2);
+CLEAR_TIME  <= state(1);
+LAP 			<= state(0);
+
+TOUT1 <= tout(3  downto 0);
+TOUT2 <= tout(7  downto 4);
+TOUT3 <= tout(11 downto 8);
+TOUT4 <= tout(15 downto 12);
+
 end Behavioral;
 
