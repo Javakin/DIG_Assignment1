@@ -83,6 +83,7 @@ process (CLK)
 		if CLEAR = '1' then 
 			-- clear all
 			tout <= (others => '0');
+			state <= Stop_state;
 		elsif (rising_edge(CLK)) then
 			-- execute states
 			
