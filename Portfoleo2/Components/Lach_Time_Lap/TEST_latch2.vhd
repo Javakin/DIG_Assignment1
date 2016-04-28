@@ -116,9 +116,22 @@ BEGIN
       wait for 1 ms;	
 
       IN_BCD4 <= IN_BCD4 + 1;
-		
+		wait for 1 ms;
+		IN_BCD4 <= IN_BCD4 + 1;
+		wait for 1 ms;
+		IN_BCD4 <= IN_BCD4 + 1;
+		wait for 1 ms;
+		IN_BCD4 <= IN_BCD4 + 1;
+		wait for 1 ms;
+		IN_BCD4 <= IN_BCD4 + 1;
+		wait for 1 ms;
+		IN_BCD4 <= IN_BCD4 + 1;
 		wait for 1 ms;
 		
+		HIGH_SCORE <= '1';
+		
+		wait for 2 ms;
+		HIGH_SCORE <= '0';
 		
 
       -- insert stimulus here
