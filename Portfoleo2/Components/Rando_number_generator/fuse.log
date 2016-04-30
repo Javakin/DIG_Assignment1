@@ -1,0 +1,21 @@
+Running: D:\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o D:/Git/DIG_Portfoleo2/Portfoleo2/Components/Rando_number_generator/TEST_random_number_generader_isim_beh.exe -prj D:/Git/DIG_Portfoleo2/Portfoleo2/Components/Rando_number_generator/TEST_random_number_generader_beh.prj work.TEST_random_number_generader 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "D:/Git/DIG_Portfoleo2/Portfoleo2/Components/Rando_number_generator/rand_gen.vhd" into library work
+Parsing VHDL file "D:/Git/DIG_Portfoleo2/Portfoleo2/Components/Rando_number_generator/TEST_random_number_generader.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling architecture behavioral of entity rand_gen [rand_gen_default]
+Compiling architecture behavior of entity test_random_number_generader
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 7 VHDL Units
+Built simulation executable D:/Git/DIG_Portfoleo2/Portfoleo2/Components/Rando_number_generator/TEST_random_number_generader_isim_beh.exe
+Fuse Memory Usage: 33344 KB
+Fuse CPU Usage: 640 ms

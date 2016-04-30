@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "D:/Git/DIG_Portfoleo2/Portfoleo2/Components/Rando_number_generator/TEST_random_number_generader_isim_beh.exe" -prj "D:/Git/DIG_Portfoleo2/Portfoleo2/Components/Rando_number_generator/TEST_random_number_generader_beh.prj" "work.TEST_random_number_generader" 

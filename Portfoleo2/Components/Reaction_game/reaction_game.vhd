@@ -47,6 +47,7 @@ entity reaction_game is
 			  CLEAR_TIME		: out STD_LOGIC;
            CLK 				: in  STD_LOGIC;
            LED 				: out STD_LOGIC;
+			  LAP 				: out STD_LOGIC;
            RAND 				: in  STD_LOGIC_VECTOR (15 downto 0));
 end reaction_game;
 
@@ -54,10 +55,11 @@ end reaction_game;
 architecture Behavioral of reaction_game is
 -- Define signals
 ----------------------------------------------------------------------------------
-signal tout : STD_LOGIC_VECTOR (15 downto 0);
+signal tout : STD_LOGIC_VECTOR (15 downto 0) := (others => '1');
 signal tin  : STD_LOGIC_VECTOR (15 downto 0);
-signal btn	: STD_LOGIC;
+signal btn	: STD_LOGIC_VECTOR (1 downto 0);
 signal state : STD_LOGIC_VECTOR (2 downto 0) := "001";
+
 
 -- Define constants
 ----------------------------------------------------------------------------------
@@ -69,6 +71,8 @@ constant Stop_state 		 : STD_LOGIC_VECTOR (2 downto 0) := "001";
 constant Start_state 	 : STD_LOGIC_VECTOR (2 downto 0) := "010";
 constant Release_state   : STD_LOGIC_VECTOR (2 downto 0) := "000";
 constant RT_passed_state : STD_LOGIC_VECTOR (2 downto 0) := "100";
+constant Clr_time_state  : STD_LOGIC_VECTOR (2 downto 0) := "110";
+
 
 
 begin
@@ -78,7 +82,7 @@ tin <= TIN4 & TIN3 & TIN2 & TIN1;
 btn <= START_TOGGLE & START_DEBOUNCE;
 
 State_mashine : 
-process (CLK)
+process (CLK, CLEAR)
 	begin
 		if CLEAR = '1' then 
 			-- clear all
@@ -86,6 +90,41 @@ process (CLK)
 			state <= Stop_state;
 		elsif (rising_edge(CLK)) then
 			-- execute states
+			if state = Stop_state then
+				-- wait for start
+				if btn = "11" then 
+					state <= Start_state; 
+				end if;
+				
+			elsif state = Start_state then
+				-- clear lap and time
+				if btn = "10" then 
+					state <= Release_state;
+					tout <= (others => '0');
+				end if;
+				
+			elsif state = Release_state then
+				-- wait for time = random time
+				if btn = "01" then 
+					state <= Stop_state;
+					tout <= "1001100110011001";
+				end if;
+				
+				if tin > RAND then
+					state <= Clr_time_state;
+				end if;
+				
+			elsif state = Clr_time_state then
+				-- clear counter
+				state <= RT_passed_state;
+				
+			elsif state = RT_passed_state then
+				-- wait for respons
+				tout <= tin;
+				if btn = "01" then
+					state <= Stop_state;
+				end if;
+			end if;
 			
 		end if;
 	end process;

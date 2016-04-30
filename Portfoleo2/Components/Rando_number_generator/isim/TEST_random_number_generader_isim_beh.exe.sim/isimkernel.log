@@ -1,0 +1,10 @@
+Command line:
+   TEST_random_number_generader_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  50236
+
+Sat Apr 30 15:00:18 2016
+
+
+ Elaboration Time: 0.203125 sec
