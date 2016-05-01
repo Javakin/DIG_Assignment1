@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : Reaction_game_ass.vhf
--- /___/   /\     Timestamp : 05/01/2016 14:12:58
+-- /___/   /\     Timestamp : 05/01/2016 18:50:38
 -- \   \  /  \ 
 --  \___\/\___\ 
 --

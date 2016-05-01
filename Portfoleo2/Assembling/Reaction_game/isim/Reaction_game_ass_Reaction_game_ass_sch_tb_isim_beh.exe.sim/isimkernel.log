@@ -2,28 +2,28 @@ Command line:
    Reaction_game_ass_Reaction_game_ass_sch_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  53173
+     -socket  53634
 
-Sun May 01 14:02:41 2016
+Sun May 01 18:56:50 2016
 
 
- Elaboration Time: 0.1875 sec
+ Elaboration Time: 0.15625 sec
 
- Current Memory Usage: 1023.74 Meg
+ Current Memory Usage: 866.497 Meg
 
  Total Signals          : 153
- Total Nets             : 291
+ Total Nets             : 282
  Total Signal Drivers   : 60
  Total Blocks           : 17
  Total Primitive Blocks : 15
  Total Processes        : 54
  Total Traceable Variables  : 39
- Total Scalar Nets and Variables : 862
+ Total Scalar Nets and Variables : 853
 Total Line Count : 146
 
- Total Simulation Time: 154 sec
+ Total Simulation Time: 52.8594 sec
 
- Current Memory Usage: 866.423 Meg
+ Current Memory Usage: 709.177 Meg
 
-Sun May 01 14:06:13 2016
+Sun May 01 18:59:03 2016
 
