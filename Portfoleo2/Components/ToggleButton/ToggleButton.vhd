@@ -35,7 +35,7 @@ end ToggleButton;
 architecture Behavioral of ToggleButton is
 -- Internal signals
 -----------------------------------------------------------------------------
-signal Q	: 	STD_LOGIC_VECTOR (6 downto 0) := (others => '0');
+signal Q	: 	STD_LOGIC_VECTOR (3 downto 0) := (others => '0');
 signal set 	:   STD_LOGIC	:= '0';
 signal res 	:   STD_LOGIC	:= '0';
 
@@ -53,19 +53,19 @@ constant s5		: STD_LOGIC_VECTOR( 2 downto 0 ) := "010";
 
 begin
 
--- kill noise 10 ms delay
+-- kill noise 4 ms delay
 -----------------------------------------------------------------------------
 Shift_noise	:
 PROCESS(CLK)
 	BEGIN
 		if rising_edge(CLK) then
 			-- Shift button value in the Q register;
-			Q	<= Q(5 downto 0) & BUTTON;
+			Q	<= Q(2 downto 0) & BUTTON;
 		end if;
 	END PROCESS;
 
-set 	<= 	'1'   when Q = "1111111" else '0'; 
-res 	<= 	'1'	when Q = "0000000" else '0';
+set 	<= 	'1'   when Q = "1111" else '0'; 
+res 	<= 	'1'	when Q = "0000" else '0';
 
 
 -- statemashine

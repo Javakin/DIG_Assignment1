@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "D:/Git/DIG_Assignment1/Projeckt/Komponenter/ToggleButton/TEST_ToggleButton.vhd";
+static const char *ng0 = "D:/Git/DIG_Assignment1/Portfoleo2/Components/ToggleButton/TEST_ToggleButton.vhd";
 
 
 
