@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="MuxDisplay">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2016-5-1T11:36:5</timestamp>
+    <timestamp>2016-5-1T16:41:7</timestamp>
     <pin polarity="Input" x="0" y="-224" name="CLK_1K" />
     <pin polarity="Input" x="0" y="-160" name="DOTS(3:0)" />
     <pin polarity="Input" x="0" y="32" name="BCD1(3:0)" />

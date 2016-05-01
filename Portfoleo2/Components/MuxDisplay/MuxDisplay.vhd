@@ -105,10 +105,10 @@ WITH numb SELECT
 -- Mux-segment that switches between segment dots
 ----------------------------------------------------------------------------------------------
 WITH seg_no SELECT
-	dot <= 	DOTS(0)  WHEN "1110",
-				DOTS(1)  WHEN "1101",
-				DOTS(2)  WHEN "1011",
-				DOTS(3)  WHEN OTHERS;
+	dot <= 	'1'  WHEN "1110",
+				'1'  WHEN "1101",
+				'0'  WHEN "1011",
+				'1'  WHEN OTHERS;
 			
 -- combine signals at the end
 ----------------------------------------------------------------------------------------------
