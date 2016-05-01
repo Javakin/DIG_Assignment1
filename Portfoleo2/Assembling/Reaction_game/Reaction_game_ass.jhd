@@ -1,6 +1,6 @@
 MODULE Reaction_game_ass
 	SUBMODULE Cnt9999
-		INSTANCE cnt9999
+		INSTANCE cnt_inst
 	SUBMODULE MuxDisplay
 		INSTANCE mux_display
 	SUBMODULE StepDown1KHz
@@ -14,6 +14,6 @@ MODULE Reaction_game_ass
 	SUBMODULE ToggleButton
 		INSTANCE Start_but
 	SUBMODULE rand_gen
-		INSTANCE rand_gen
+		INSTANCE rand_gen_inst
 	SUBMODULE reaction_game
-		INSTANCE reaction_game
+		INSTANCE reaction_game_inst

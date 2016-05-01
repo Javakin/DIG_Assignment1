@@ -191,7 +191,7 @@
             <line x2="64" y1="0" y2="-32" x1="64" />
             <line x2="32" y1="-64" y2="-64" x1="96" />
         </blockdef>
-        <block symbolname="Cnt9999" name="cnt9999">
+        <block symbolname="Cnt9999" name="cnt_inst">
             <blockpin signalname="XLXN_67" name="EN" />
             <blockpin signalname="CLK_1KHz" name="CLK" />
             <blockpin signalname="XLXN_65" name="CLR" />
@@ -244,12 +244,12 @@
             <blockpin signalname="XLXN_66" name="DEBOUNCE" />
             <blockpin name="PULSE" />
         </block>
-        <block symbolname="rand_gen" name="rand_gen">
+        <block symbolname="rand_gen" name="rand_gen_inst">
             <blockpin signalname="XLXN_61" name="ST_TOG" />
             <blockpin signalname="CLK_1KHz" name="CLK" />
             <blockpin signalname="XLXN_10(15:0)" name="RAND_NUMB(15:0)" />
         </block>
-        <block symbolname="reaction_game" name="reaction_game">
+        <block symbolname="reaction_game" name="reaction_game_inst">
             <blockpin signalname="XLXN_63" name="START_DEBOUNCE" />
             <blockpin signalname="XLXN_61" name="START_TOGGLE" />
             <blockpin signalname="XLXN_64" name="CLEAR" />
@@ -278,7 +278,7 @@
     <sheet sheetnum="1" width="3520" height="2720">
         <instance x="192" y="944" name="Start_but" orien="R0">
         </instance>
-        <instance x="1472" y="1424" name="reaction_game" orien="R0">
+        <instance x="1472" y="1424" name="reaction_game_inst" orien="R0">
         </instance>
         <instance x="2848" y="1056" name="mux_display" orien="R0">
         </instance>
@@ -337,7 +337,7 @@
             <wire x2="1296" y1="1248" y2="1328" x1="1296" />
             <wire x2="1472" y1="1328" y2="1328" x1="1296" />
         </branch>
-        <instance x="832" y="1280" name="cnt9999" orien="R0">
+        <instance x="832" y="1280" name="cnt_inst" orien="R0">
         </instance>
         <branch name="XLXN_19(3:0)">
             <wire x2="1984" y1="1360" y2="1360" x1="1968" />
@@ -372,7 +372,7 @@
             <wire x2="2160" y1="672" y2="672" x1="2032" />
         </branch>
         <iomarker fontsize="28" x="2160" y="672" name="LED" orien="R0" />
-        <instance x="816" y="1488" name="rand_gen" orien="R0">
+        <instance x="816" y="1488" name="rand_gen_inst" orien="R0">
         </instance>
         <branch name="CLK_50MHz">
             <wire x2="432" y1="336" y2="336" x1="400" />

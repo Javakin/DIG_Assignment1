@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/Git/DIG_Assignment1/Portfoleo2/Assembling/Reaction_game/Reaction_game_ass_Reaction_game_ass_sch_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="numeric_std" />
+            <top_module name="reaction_game_ass_reaction_game_ass_sch_tb" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="vcomponents" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="10" />
+   <wvobject fp_name="/reaction_game_ass_reaction_game_ass_sch_tb/an" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">an[3:0]</obj_property>
+      <obj_property name="ObjectShortName">an[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/reaction_game_ass_reaction_game_ass_sch_tb/seg" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">seg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">seg[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/reaction_game_ass_reaction_game_ass_sch_tb/hiscore" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">hiscore</obj_property>
+      <obj_property name="ObjectShortName">hiscore</obj_property>
+   </wvobject>
+   <wvobject fp_name="/reaction_game_ass_reaction_game_ass_sch_tb/clear" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clear</obj_property>
+      <obj_property name="ObjectShortName">clear</obj_property>
+   </wvobject>
+   <wvobject fp_name="/reaction_game_ass_reaction_game_ass_sch_tb/led" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">led</obj_property>
+      <obj_property name="ObjectShortName">led</obj_property>
+   </wvobject>
+   <wvobject fp_name="/reaction_game_ass_reaction_game_ass_sch_tb/clk_50mhz" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_50mhz</obj_property>
+      <obj_property name="ObjectShortName">clk_50mhz</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#008000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/reaction_game_ass_reaction_game_ass_sch_tb/clk_50mhz_period" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_50mhz_period</obj_property>
+      <obj_property name="ObjectShortName">clk_50mhz_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="vbus11" type="vbus" db_ref_id="1">
+      <obj_property name="label">start</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/reaction_game_ass_reaction_game_ass_sch_tb/start" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">start</obj_property>
+         <obj_property name="ObjectShortName">start</obj_property>
+      </wvobject>
+      <wvobject fp_name="/reaction_game_ass_reaction_game_ass_sch_tb/UUT/Start_but/debounce" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">debounce</obj_property>
+         <obj_property name="ObjectShortName">debounce</obj_property>
+      </wvobject>
+      <wvobject fp_name="/reaction_game_ass_reaction_game_ass_sch_tb/UUT/Start_but/toggle" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">toggle</obj_property>
+         <obj_property name="ObjectShortName">toggle</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/reaction_game_ass_reaction_game_ass_sch_tb/UUT/rand_gen_inst/rand_numb" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rand_numb[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rand_numb[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="vbus17" type="vbus" db_ref_id="1">
+      <obj_property name="label">current_time</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/reaction_game_ass_reaction_game_ass_sch_tb/UUT/cnt_inst/bcd1_1" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">bcd1_1[3:0]</obj_property>
+         <obj_property name="ObjectShortName">bcd1_1[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/reaction_game_ass_reaction_game_ass_sch_tb/UUT/cnt_inst/bcd1_10" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">bcd1_10[3:0]</obj_property>
+         <obj_property name="ObjectShortName">bcd1_10[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/reaction_game_ass_reaction_game_ass_sch_tb/UUT/cnt_inst/bcd1_100" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">bcd1_100[3:0]</obj_property>
+         <obj_property name="ObjectShortName">bcd1_100[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/reaction_game_ass_reaction_game_ass_sch_tb/UUT/cnt_inst/bcd1_1000" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">bcd1_1000[3:0]</obj_property>
+         <obj_property name="ObjectShortName">bcd1_1000[3:0]</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : Reaction_game_ass.vhf
--- /___/   /\     Timestamp : 05/01/2016 12:52:43
+-- /___/   /\     Timestamp : 05/01/2016 13:10:55
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -37,28 +37,36 @@ end Reaction_game_ass;
 
 architecture BEHAVIORAL of Reaction_game_ass is
    attribute BOX_TYPE   : string ;
-   signal CLK_1KHz               : std_logic;
-   signal XLXN_1                 : std_logic_vector (3 downto 0);
-   signal XLXN_2                 : std_logic_vector (3 downto 0);
-   signal XLXN_3                 : std_logic_vector (3 downto 0);
-   signal XLXN_4                 : std_logic_vector (3 downto 0);
-   signal XLXN_10                : std_logic_vector (15 downto 0);
-   signal XLXN_11                : std_logic_vector (3 downto 0);
-   signal XLXN_12                : std_logic_vector (3 downto 0);
-   signal XLXN_13                : std_logic_vector (3 downto 0);
-   signal XLXN_14                : std_logic_vector (3 downto 0);
-   signal XLXN_19                : std_logic_vector (3 downto 0);
-   signal XLXN_20                : std_logic_vector (3 downto 0);
-   signal XLXN_26                : std_logic_vector (3 downto 0);
-   signal XLXN_33                : std_logic_vector (3 downto 0);
-   signal XLXN_50                : std_logic;
-   signal XLXN_61                : std_logic;
-   signal XLXN_63                : std_logic;
-   signal XLXN_64                : std_logic;
-   signal XLXN_65                : std_logic;
-   signal XLXN_66                : std_logic;
-   signal XLXN_67                : std_logic;
-   signal XLXI_2_DOTS_openSignal : std_logic_vector (3 downto 0);
+   signal CLK_1KHz                    : std_logic;
+   signal XLXN_1                      : std_logic_vector (3 downto 0);
+   signal XLXN_2                      : std_logic_vector (3 downto 0);
+   signal XLXN_3                      : std_logic_vector (3 downto 0);
+   signal XLXN_4                      : std_logic_vector (3 downto 0);
+   signal XLXN_10                     : std_logic_vector (15 downto 0);
+   signal XLXN_11                     : std_logic_vector (3 downto 0);
+   signal XLXN_12                     : std_logic_vector (3 downto 0);
+   signal XLXN_13                     : std_logic_vector (3 downto 0);
+   signal XLXN_14                     : std_logic_vector (3 downto 0);
+   signal XLXN_19                     : std_logic_vector (3 downto 0);
+   signal XLXN_20                     : std_logic_vector (3 downto 0);
+   signal XLXN_26                     : std_logic_vector (3 downto 0);
+   signal XLXN_33                     : std_logic_vector (3 downto 0);
+   signal XLXN_50                     : std_logic;
+   signal XLXN_61                     : std_logic;
+   signal XLXN_63                     : std_logic;
+   signal XLXN_64                     : std_logic;
+   signal XLXN_65                     : std_logic;
+   signal XLXN_66                     : std_logic;
+   signal XLXN_67                     : std_logic;
+   signal mux_display_DOTS_openSignal : std_logic_vector (3 downto 0);
+   component ToggleButton
+      port ( CLK      : in    std_logic; 
+             BUTTON   : in    std_logic; 
+             TOGGLE   : out   std_logic; 
+             DEBOUNCE : out   std_logic; 
+             PULSE    : out   std_logic);
+   end component;
+   
    component Cnt9999
       port ( EN        : in    std_logic; 
              CLK       : in    std_logic; 
@@ -78,33 +86,6 @@ architecture BEHAVIORAL of Reaction_game_ass is
              BCD2   : in    std_logic_vector (3 downto 0); 
              BCD3   : in    std_logic_vector (3 downto 0); 
              BCD4   : in    std_logic_vector (3 downto 0));
-   end component;
-   
-   component StepDown1KHz
-      port ( CLK_50MHz : in    std_logic; 
-             CLK_1KHz  : out   std_logic);
-   end component;
-   
-   component Time_Lap_Lach
-      port ( LAP        : in    std_logic; 
-             CLEAR      : in    std_logic; 
-             HIGH_SCORE : in    std_logic; 
-             IN_BCD1    : in    std_logic_vector (3 downto 0); 
-             IN_BCD2    : in    std_logic_vector (3 downto 0); 
-             IN_BCD3    : in    std_logic_vector (3 downto 0); 
-             IN_BCD4    : in    std_logic_vector (3 downto 0); 
-             OUT_BCD1   : out   std_logic_vector (3 downto 0); 
-             OUT_BCD2   : out   std_logic_vector (3 downto 0); 
-             OUT_BCD3   : out   std_logic_vector (3 downto 0); 
-             OUT_BCD4   : out   std_logic_vector (3 downto 0));
-   end component;
-   
-   component ToggleButton
-      port ( CLK      : in    std_logic; 
-             BUTTON   : in    std_logic; 
-             TOGGLE   : out   std_logic; 
-             DEBOUNCE : out   std_logic; 
-             PULSE    : out   std_logic);
    end component;
    
    component rand_gen
@@ -132,13 +113,39 @@ architecture BEHAVIORAL of Reaction_game_ass is
              TOUT4          : out   std_logic_vector (3 downto 0));
    end component;
    
+   component Time_Lap_Lach
+      port ( LAP        : in    std_logic; 
+             CLEAR      : in    std_logic; 
+             HIGH_SCORE : in    std_logic; 
+             IN_BCD1    : in    std_logic_vector (3 downto 0); 
+             IN_BCD2    : in    std_logic_vector (3 downto 0); 
+             IN_BCD3    : in    std_logic_vector (3 downto 0); 
+             IN_BCD4    : in    std_logic_vector (3 downto 0); 
+             OUT_BCD1   : out   std_logic_vector (3 downto 0); 
+             OUT_BCD2   : out   std_logic_vector (3 downto 0); 
+             OUT_BCD3   : out   std_logic_vector (3 downto 0); 
+             OUT_BCD4   : out   std_logic_vector (3 downto 0));
+   end component;
+   
+   component StepDown1KHz
+      port ( CLK_50MHz : in    std_logic; 
+             CLK_1KHz  : out   std_logic);
+   end component;
+   
    component VCC
       port ( P : out   std_logic);
    end component;
    attribute BOX_TYPE of VCC : component is "BLACK_BOX";
    
 begin
-   XLXI_1 : Cnt9999
+   Clear_but : ToggleButton
+      port map (BUTTON=>CLEAR,
+                CLK=>CLK_1KHz,
+                DEBOUNCE=>XLXN_64,
+                PULSE=>open,
+                TOGGLE=>open);
+   
+   cnt_inst : Cnt9999
       port map (CLK=>CLK_1KHz,
                 CLR=>XLXN_65,
                 EN=>XLXN_67,
@@ -147,60 +154,29 @@ begin
                 BCD1_100(3 downto 0)=>XLXN_12(3 downto 0),
                 BCD1_1000(3 downto 0)=>XLXN_11(3 downto 0));
    
-   XLXI_2 : MuxDisplay
-      port map (BCD1(3 downto 0)=>XLXN_1(3 downto 0),
-                BCD2(3 downto 0)=>XLXN_2(3 downto 0),
-                BCD3(3 downto 0)=>XLXN_3(3 downto 0),
-                BCD4(3 downto 0)=>XLXN_4(3 downto 0),
-                CLK_1K=>CLK_1KHz,
-                DOTS(3 downto 0)=>XLXI_2_DOTS_openSignal(3 downto 0),
-                AN(3 downto 0)=>AN(3 downto 0),
-                SEG(7 downto 0)=>SEG(7 downto 0));
-   
-   XLXI_3 : StepDown1KHz
-      port map (CLK_50MHz=>CLK_50MHz,
-                CLK_1KHz=>CLK_1KHz);
-   
-   XLXI_4 : Time_Lap_Lach
-      port map (CLEAR=>XLXN_64,
-                HIGH_SCORE=>XLXN_66,
-                IN_BCD1(3 downto 0)=>XLXN_33(3 downto 0),
-                IN_BCD2(3 downto 0)=>XLXN_26(3 downto 0),
-                IN_BCD3(3 downto 0)=>XLXN_20(3 downto 0),
-                IN_BCD4(3 downto 0)=>XLXN_19(3 downto 0),
-                LAP=>XLXN_50,
-                OUT_BCD1(3 downto 0)=>XLXN_1(3 downto 0),
-                OUT_BCD2(3 downto 0)=>XLXN_2(3 downto 0),
-                OUT_BCD3(3 downto 0)=>XLXN_3(3 downto 0),
-                OUT_BCD4(3 downto 0)=>XLXN_4(3 downto 0));
-   
-   XLXI_5 : ToggleButton
-      port map (BUTTON=>START,
-                CLK=>CLK_1KHz,
-                DEBOUNCE=>XLXN_63,
-                PULSE=>open,
-                TOGGLE=>XLXN_61);
-   
-   XLXI_6 : ToggleButton
-      port map (BUTTON=>CLEAR,
-                CLK=>CLK_1KHz,
-                DEBOUNCE=>XLXN_64,
-                PULSE=>open,
-                TOGGLE=>open);
-   
-   XLXI_7 : ToggleButton
+   Hi_but : ToggleButton
       port map (BUTTON=>HISCORE,
                 CLK=>CLK_1KHz,
                 DEBOUNCE=>XLXN_66,
                 PULSE=>open,
                 TOGGLE=>open);
    
-   XLXI_8 : rand_gen
+   mux_display : MuxDisplay
+      port map (BCD1(3 downto 0)=>XLXN_1(3 downto 0),
+                BCD2(3 downto 0)=>XLXN_2(3 downto 0),
+                BCD3(3 downto 0)=>XLXN_3(3 downto 0),
+                BCD4(3 downto 0)=>XLXN_4(3 downto 0),
+                CLK_1K=>CLK_1KHz,
+                DOTS(3 downto 0)=>mux_display_DOTS_openSignal(3 downto 0),
+                AN(3 downto 0)=>AN(3 downto 0),
+                SEG(7 downto 0)=>SEG(7 downto 0));
+   
+   rand_gen_inst : rand_gen
       port map (CLK=>CLK_1KHz,
                 ST_TOG=>XLXN_61,
                 RAND_NUMB(15 downto 0)=>XLXN_10(15 downto 0));
    
-   XLXI_9 : reaction_game
+   reaction_game_inst : reaction_game
       port map (CLEAR=>XLXN_64,
                 CLK=>CLK_1KHz,
                 RAND(15 downto 0)=>XLXN_10(15 downto 0),
@@ -217,6 +193,30 @@ begin
                 TOUT2(3 downto 0)=>XLXN_26(3 downto 0),
                 TOUT3(3 downto 0)=>XLXN_20(3 downto 0),
                 TOUT4(3 downto 0)=>XLXN_19(3 downto 0));
+   
+   Start_but : ToggleButton
+      port map (BUTTON=>START,
+                CLK=>CLK_1KHz,
+                DEBOUNCE=>XLXN_63,
+                PULSE=>open,
+                TOGGLE=>XLXN_61);
+   
+   time_lap_latch : Time_Lap_Lach
+      port map (CLEAR=>XLXN_64,
+                HIGH_SCORE=>XLXN_66,
+                IN_BCD1(3 downto 0)=>XLXN_33(3 downto 0),
+                IN_BCD2(3 downto 0)=>XLXN_26(3 downto 0),
+                IN_BCD3(3 downto 0)=>XLXN_20(3 downto 0),
+                IN_BCD4(3 downto 0)=>XLXN_19(3 downto 0),
+                LAP=>XLXN_50,
+                OUT_BCD1(3 downto 0)=>XLXN_1(3 downto 0),
+                OUT_BCD2(3 downto 0)=>XLXN_2(3 downto 0),
+                OUT_BCD3(3 downto 0)=>XLXN_3(3 downto 0),
+                OUT_BCD4(3 downto 0)=>XLXN_4(3 downto 0));
+   
+   XLXI_3 : StepDown1KHz
+      port map (CLK_50MHz=>CLK_50MHz,
+                CLK_1KHz=>CLK_1KHz);
    
    XLXI_11 : VCC
       port map (P=>XLXN_67);

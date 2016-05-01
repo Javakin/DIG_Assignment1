@@ -1,4 +1,4 @@
-Running: D:\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o D:/Git/DIG_Assignment1/Portfoleo2/Assembling/Reaction_game/Reaction_game_ass_Reaction_game_ass_sch_tb_isim_beh.exe -prj D:/Git/DIG_Assignment1/Portfoleo2/Assembling/Reaction_game/Reaction_game_ass_Reaction_game_ass_sch_tb_beh.prj work.Reaction_game_ass_Reaction_game_ass_sch_tb 
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -o "D:/Git/DIG_Assignment1/Portfoleo2/Assembling/Reaction_game/Reaction_game_ass_Reaction_game_ass_sch_tb_isim_beh.exe" -prj "D:/Git/DIG_Assignment1/Portfoleo2/Assembling/Reaction_game/Reaction_game_ass_Reaction_game_ass_sch_tb_beh.prj" "work.Reaction_game_ass_Reaction_game_ass_sch_tb" 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
@@ -20,13 +20,13 @@ Compiling package numeric_std
 Compiling package vcomponents
 Compiling package std_logic_arith
 Compiling package std_logic_unsigned
+Compiling architecture behavioral of entity ToggleButton [togglebutton_default]
 Compiling architecture behavioral of entity Cnt9999 [cnt9999_default]
 Compiling architecture behavioral of entity MuxDisplay [muxdisplay_default]
-Compiling architecture behavioral of entity StepDown1KHz [stepdown1khz_default]
-Compiling architecture behavioral of entity Time_Lap_Lach [time_lap_lach_default]
-Compiling architecture behavioral of entity ToggleButton [togglebutton_default]
 Compiling architecture behavioral of entity rand_gen [rand_gen_default]
 Compiling architecture behavioral of entity reaction_game [reaction_game_default]
+Compiling architecture behavioral of entity Time_Lap_Lach [time_lap_lach_default]
+Compiling architecture behavioral of entity StepDown1KHz [stepdown1khz_default]
 Compiling architecture vcc_v of entity VCC [vcc_default]
 Compiling architecture behavioral of entity Reaction_game_ass [reaction_game_ass_default]
 Compiling architecture behavioral of entity reaction_game_ass_reaction_game_...
@@ -34,5 +34,5 @@ Time Resolution for simulation is 1ps.
 Waiting for 8 sub-compilation(s) to finish...
 Compiled 25 VHDL Units
 Built simulation executable D:/Git/DIG_Assignment1/Portfoleo2/Assembling/Reaction_game/Reaction_game_ass_Reaction_game_ass_sch_tb_isim_beh.exe
-Fuse Memory Usage: 51812 KB
-Fuse CPU Usage: 1030 ms
+Fuse Memory Usage: 51668 KB
+Fuse CPU Usage: 1093 ms
