@@ -1,19 +1,19 @@
 MODULE Reaction_game_ass
 	SUBMODULE Cnt9999
-		INSTANCE XLXI_1
+		INSTANCE cnt9999
 	SUBMODULE MuxDisplay
-		INSTANCE XLXI_2
+		INSTANCE mux_display
 	SUBMODULE StepDown1KHz
 		INSTANCE XLXI_3
 	SUBMODULE Time_Lap_Lach
-		INSTANCE XLXI_4
+		INSTANCE time_lap_latch
 	SUBMODULE ToggleButton
-		INSTANCE XLXI_5
+		INSTANCE Clear_but
 	SUBMODULE ToggleButton
-		INSTANCE XLXI_6
+		INSTANCE Hi_but
 	SUBMODULE ToggleButton
-		INSTANCE XLXI_7
+		INSTANCE Start_but
 	SUBMODULE rand_gen
-		INSTANCE XLXI_8
+		INSTANCE rand_gen
 	SUBMODULE reaction_game
-		INSTANCE XLXI_9
+		INSTANCE reaction_game

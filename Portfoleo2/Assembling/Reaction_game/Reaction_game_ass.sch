@@ -191,7 +191,7 @@
             <line x2="64" y1="0" y2="-32" x1="64" />
             <line x2="32" y1="-64" y2="-64" x1="96" />
         </blockdef>
-        <block symbolname="Cnt9999" name="XLXI_1">
+        <block symbolname="Cnt9999" name="cnt9999">
             <blockpin signalname="XLXN_67" name="EN" />
             <blockpin signalname="CLK_1KHz" name="CLK" />
             <blockpin signalname="XLXN_65" name="CLR" />
@@ -200,7 +200,7 @@
             <blockpin signalname="XLXN_13(3:0)" name="BCD1_10(3:0)" />
             <blockpin signalname="XLXN_14(3:0)" name="BCD1_1(3:0)" />
         </block>
-        <block symbolname="MuxDisplay" name="XLXI_2">
+        <block symbolname="MuxDisplay" name="mux_display">
             <blockpin signalname="CLK_1KHz" name="CLK_1K" />
             <blockpin name="DOTS(3:0)" />
             <blockpin signalname="AN(3:0)" name="AN(3:0)" />
@@ -210,7 +210,7 @@
             <blockpin signalname="XLXN_3(3:0)" name="BCD3(3:0)" />
             <blockpin signalname="XLXN_4(3:0)" name="BCD4(3:0)" />
         </block>
-        <block symbolname="Time_Lap_Lach" name="XLXI_4">
+        <block symbolname="Time_Lap_Lach" name="time_lap_latch">
             <blockpin signalname="XLXN_50" name="LAP" />
             <blockpin signalname="XLXN_64" name="CLEAR" />
             <blockpin signalname="XLXN_66" name="HIGH_SCORE" />
@@ -223,33 +223,33 @@
             <blockpin signalname="XLXN_3(3:0)" name="OUT_BCD3(3:0)" />
             <blockpin signalname="XLXN_4(3:0)" name="OUT_BCD4(3:0)" />
         </block>
-        <block symbolname="ToggleButton" name="XLXI_5">
+        <block symbolname="ToggleButton" name="Start_but">
             <blockpin signalname="CLK_1KHz" name="CLK" />
             <blockpin signalname="START" name="BUTTON" />
             <blockpin signalname="XLXN_61" name="TOGGLE" />
             <blockpin signalname="XLXN_63" name="DEBOUNCE" />
             <blockpin name="PULSE" />
         </block>
-        <block symbolname="ToggleButton" name="XLXI_6">
+        <block symbolname="ToggleButton" name="Clear_but">
             <blockpin signalname="CLK_1KHz" name="CLK" />
             <blockpin signalname="CLEAR" name="BUTTON" />
             <blockpin name="TOGGLE" />
             <blockpin signalname="XLXN_64" name="DEBOUNCE" />
             <blockpin name="PULSE" />
         </block>
-        <block symbolname="ToggleButton" name="XLXI_7">
+        <block symbolname="ToggleButton" name="Hi_but">
             <blockpin signalname="CLK_1KHz" name="CLK" />
             <blockpin signalname="HISCORE" name="BUTTON" />
             <blockpin name="TOGGLE" />
             <blockpin signalname="XLXN_66" name="DEBOUNCE" />
             <blockpin name="PULSE" />
         </block>
-        <block symbolname="rand_gen" name="XLXI_8">
+        <block symbolname="rand_gen" name="rand_gen">
             <blockpin signalname="XLXN_61" name="ST_TOG" />
             <blockpin signalname="CLK_1KHz" name="CLK" />
             <blockpin signalname="XLXN_10(15:0)" name="RAND_NUMB(15:0)" />
         </block>
-        <block symbolname="reaction_game" name="XLXI_9">
+        <block symbolname="reaction_game" name="reaction_game">
             <blockpin signalname="XLXN_63" name="START_DEBOUNCE" />
             <blockpin signalname="XLXN_61" name="START_TOGGLE" />
             <blockpin signalname="XLXN_64" name="CLEAR" />
@@ -276,11 +276,11 @@
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
-        <instance x="192" y="944" name="XLXI_5" orien="R0">
+        <instance x="192" y="944" name="Start_but" orien="R0">
         </instance>
-        <instance x="1472" y="1424" name="XLXI_9" orien="R0">
+        <instance x="1472" y="1424" name="reaction_game" orien="R0">
         </instance>
-        <instance x="2848" y="1056" name="XLXI_2" orien="R0">
+        <instance x="2848" y="1056" name="mux_display" orien="R0">
         </instance>
         <branch name="XLXN_1(3:0)">
             <wire x2="2848" y1="1088" y2="1088" x1="2656" />
@@ -337,7 +337,7 @@
             <wire x2="1296" y1="1248" y2="1328" x1="1296" />
             <wire x2="1472" y1="1328" y2="1328" x1="1296" />
         </branch>
-        <instance x="832" y="1280" name="XLXI_1" orien="R0">
+        <instance x="832" y="1280" name="cnt9999" orien="R0">
         </instance>
         <branch name="XLXN_19(3:0)">
             <wire x2="1984" y1="1360" y2="1360" x1="1968" />
@@ -359,7 +359,7 @@
             <wire x2="2064" y1="1120" y2="1216" x1="2064" />
             <wire x2="2144" y1="1216" y2="1216" x1="2064" />
         </branch>
-        <instance x="2144" y="1056" name="XLXI_4" orien="R0">
+        <instance x="2144" y="1056" name="time_lap_latch" orien="R0">
         </instance>
         <branch name="XLXN_50">
             <wire x2="2048" y1="1040" y2="1040" x1="1968" />
@@ -372,7 +372,7 @@
             <wire x2="2160" y1="672" y2="672" x1="2032" />
         </branch>
         <iomarker fontsize="28" x="2160" y="672" name="LED" orien="R0" />
-        <instance x="816" y="1488" name="XLXI_8" orien="R0">
+        <instance x="816" y="1488" name="rand_gen" orien="R0">
         </instance>
         <branch name="CLK_50MHz">
             <wire x2="432" y1="336" y2="336" x1="400" />
@@ -401,9 +401,9 @@
             <wire x2="848" y1="336" y2="336" x1="816" />
             <wire x2="848" y1="336" y2="560" x1="848" />
         </branch>
-        <instance x="176" y="1616" name="XLXI_7" orien="R0">
+        <instance x="176" y="1616" name="Hi_but" orien="R0">
         </instance>
-        <instance x="192" y="1264" name="XLXI_6" orien="R0">
+        <instance x="192" y="1264" name="Clear_but" orien="R0">
         </instance>
         <branch name="XLXN_61">
             <wire x2="688" y1="784" y2="784" x1="576" />
