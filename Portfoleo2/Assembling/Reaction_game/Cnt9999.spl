@@ -1,0 +1,10 @@
+[Inputs]
+EN
+CLK
+CLR
+[Outputs]
+=BCD1_1000[3:0]=
+=BCD1_100[3:0]=
+=BCD1_10[3:0]=
+=BCD1_1[3:0]=
+[BiDir]

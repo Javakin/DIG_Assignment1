@@ -1,0 +1,14 @@
+[Inputs]
+LAP
+CLEAR
+HIGH_SCORE
+=IN_BCD1[3:0]=
+=IN_BCD2[3:0]=
+=IN_BCD3[3:0]=
+=IN_BCD4[3:0]=
+[Outputs]
+=OUT_BCD1[3:0]=
+=OUT_BCD2[3:0]=
+=OUT_BCD3[3:0]=
+=OUT_BCD4[3:0]=
+[BiDir]

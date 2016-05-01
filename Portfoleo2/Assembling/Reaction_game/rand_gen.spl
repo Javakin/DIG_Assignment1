@@ -1,0 +1,6 @@
+[Inputs]
+ST_TOG
+CLK
+[Outputs]
+=RAND_NUMB[15:0]=
+[BiDir]

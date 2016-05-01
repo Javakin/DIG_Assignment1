@@ -1,0 +1,11 @@
+[Inputs]
+CLK_1K
+=DOTS[3:0]=
+=BCD1[3:0]=
+=BCD2[3:0]=
+=BCD3[3:0]=
+=BCD4[3:0]=
+[Outputs]
+=AN[3:0]=
+=SEG[7:0]=
+[BiDir]

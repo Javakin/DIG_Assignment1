@@ -42,7 +42,7 @@ entity MuxDisplay is
            AN 		: out  	STD_LOGIC_VECTOR (3 downto 0);
            SEG 	: out  	STD_LOGIC_VECTOR (7 downto 0));
 end MuxDisplay;
-
+ 
 architecture Behavioral of MuxDisplay is
 -- Define signals used in component
 ----------------------------------------------------------------------------------
