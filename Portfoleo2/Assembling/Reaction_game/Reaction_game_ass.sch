@@ -52,7 +52,6 @@
         <signal name="XLXN_49(3:0)" />
         <signal name="XLXN_50" />
         <signal name="LED" />
-        <signal name="XLXN_53(3:0)" />
         <signal name="CLK_50MHz" />
         <signal name="CLK_1KHz">
         </signal>
@@ -68,6 +67,8 @@
         <signal name="XLXN_63" />
         <signal name="XLXN_64" />
         <signal name="XLXN_65" />
+        <signal name="XLXN_66" />
+        <signal name="XLXN_67" />
         <port polarity="Output" name="AN(3:0)" />
         <port polarity="Output" name="SEG(7:0)" />
         <port polarity="Input" name="HISCORE" />
@@ -184,17 +185,14 @@
             <rect width="64" x="432" y="-76" height="24" />
             <line x2="496" y1="-64" y2="-64" x1="432" />
         </blockdef>
-        <blockdef name="gnd">
+        <blockdef name="vcc">
             <timestamp>2000-1-1T10:10:10</timestamp>
-            <line x2="64" y1="-64" y2="-96" x1="64" />
-            <line x2="52" y1="-48" y2="-48" x1="76" />
-            <line x2="60" y1="-32" y2="-32" x1="68" />
-            <line x2="40" y1="-64" y2="-64" x1="88" />
-            <line x2="64" y1="-64" y2="-80" x1="64" />
-            <line x2="64" y1="-128" y2="-96" x1="64" />
+            <line x2="64" y1="-32" y2="-64" x1="64" />
+            <line x2="64" y1="0" y2="-32" x1="64" />
+            <line x2="32" y1="-64" y2="-64" x1="96" />
         </blockdef>
         <block symbolname="Cnt9999" name="XLXI_1">
-            <blockpin name="EN" />
+            <blockpin signalname="XLXN_67" name="EN" />
             <blockpin signalname="CLK_1KHz" name="CLK" />
             <blockpin signalname="XLXN_65" name="CLR" />
             <blockpin signalname="XLXN_11(3:0)" name="BCD1_1000(3:0)" />
@@ -204,7 +202,7 @@
         </block>
         <block symbolname="MuxDisplay" name="XLXI_2">
             <blockpin signalname="CLK_1KHz" name="CLK_1K" />
-            <blockpin signalname="XLXN_53(3:0)" name="DOTS(3:0)" />
+            <blockpin name="DOTS(3:0)" />
             <blockpin signalname="AN(3:0)" name="AN(3:0)" />
             <blockpin signalname="SEG(7:0)" name="SEG(7:0)" />
             <blockpin signalname="XLXN_1(3:0)" name="BCD1(3:0)" />
@@ -214,8 +212,8 @@
         </block>
         <block symbolname="Time_Lap_Lach" name="XLXI_4">
             <blockpin signalname="XLXN_50" name="LAP" />
-            <blockpin name="CLEAR" />
-            <blockpin name="HIGH_SCORE" />
+            <blockpin signalname="XLXN_64" name="CLEAR" />
+            <blockpin signalname="XLXN_66" name="HIGH_SCORE" />
             <blockpin signalname="XLXN_33(3:0)" name="IN_BCD1(3:0)" />
             <blockpin signalname="XLXN_26(3:0)" name="IN_BCD2(3:0)" />
             <blockpin signalname="XLXN_20(3:0)" name="IN_BCD3(3:0)" />
@@ -243,7 +241,7 @@
             <blockpin signalname="CLK_1KHz" name="CLK" />
             <blockpin signalname="HISCORE" name="BUTTON" />
             <blockpin name="TOGGLE" />
-            <blockpin name="DEBOUNCE" />
+            <blockpin signalname="XLXN_66" name="DEBOUNCE" />
             <blockpin name="PULSE" />
         </block>
         <block symbolname="rand_gen" name="XLXI_8">
@@ -269,12 +267,12 @@
             <blockpin signalname="XLXN_20(3:0)" name="TOUT3(3:0)" />
             <blockpin signalname="XLXN_19(3:0)" name="TOUT4(3:0)" />
         </block>
-        <block symbolname="gnd" name="XLXI_10">
-            <blockpin signalname="XLXN_53(3:0)" name="G" />
-        </block>
         <block symbolname="StepDown1KHz" name="XLXI_3">
             <blockpin signalname="CLK_50MHz" name="CLK_50MHz" />
             <blockpin signalname="CLK_1KHz" name="CLK_1KHz" />
+        </block>
+        <block symbolname="vcc" name="XLXI_11">
+            <blockpin signalname="XLXN_67" name="P" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -374,11 +372,6 @@
             <wire x2="2160" y1="672" y2="672" x1="2032" />
         </branch>
         <iomarker fontsize="28" x="2160" y="672" name="LED" orien="R0" />
-        <instance x="2704" y="1056" name="XLXI_10" orien="R0" />
-        <branch name="XLXN_53(3:0)">
-            <wire x2="2848" y1="896" y2="896" x1="2768" />
-            <wire x2="2768" y1="896" y2="928" x1="2768" />
-        </branch>
         <instance x="816" y="1488" name="XLXI_8" orien="R0">
         </instance>
         <branch name="CLK_50MHz">
@@ -429,8 +422,12 @@
         </branch>
         <branch name="XLXN_64">
             <wire x2="656" y1="1168" y2="1168" x1="576" />
+            <wire x2="656" y1="1168" y2="1536" x1="656" />
+            <wire x2="2080" y1="1536" y2="1536" x1="656" />
             <wire x2="656" y1="1008" y2="1168" x1="656" />
             <wire x2="1472" y1="1008" y2="1008" x1="656" />
+            <wire x2="2080" y1="1088" y2="1536" x1="2080" />
+            <wire x2="2144" y1="1088" y2="1088" x1="2080" />
         </branch>
         <branch name="XLXN_65">
             <wire x2="832" y1="1248" y2="1248" x1="736" />
@@ -438,6 +435,16 @@
             <wire x2="2016" y1="1552" y2="1552" x1="736" />
             <wire x2="2016" y1="880" y2="880" x1="1968" />
             <wire x2="2016" y1="880" y2="1552" x1="2016" />
+        </branch>
+        <branch name="XLXN_66">
+            <wire x2="2096" y1="1520" y2="1520" x1="560" />
+            <wire x2="2096" y1="1152" y2="1520" x1="2096" />
+            <wire x2="2144" y1="1152" y2="1152" x1="2096" />
+        </branch>
+        <instance x="736" y="992" name="XLXI_11" orien="R0" />
+        <branch name="XLXN_67">
+            <wire x2="800" y1="992" y2="1056" x1="800" />
+            <wire x2="832" y1="1056" y2="1056" x1="800" />
         </branch>
     </sheet>
 </drawing>

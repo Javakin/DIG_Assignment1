@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "D:/Git/DIG_Assignment1/Portfoleo2/Assembling/Reaction_game/Reaction_game_ass_Reaction_game_ass_sch_tb_isim_beh.exe" -prj "D:/Git/DIG_Assignment1/Portfoleo2/Assembling/Reaction_game/Reaction_game_ass_Reaction_game_ass_sch_tb_beh.prj" "work.Reaction_game_ass_Reaction_game_ass_sch_tb" 
