@@ -20,49 +20,14 @@
         <signal name="XLXN_12(3:0)" />
         <signal name="XLXN_13(3:0)" />
         <signal name="XLXN_14(3:0)" />
-        <signal name="XLXN_15(3:0)" />
-        <signal name="XLXN_16(3:0)" />
-        <signal name="XLXN_17(3:0)" />
         <signal name="XLXN_19(3:0)" />
         <signal name="XLXN_20(3:0)" />
-        <signal name="XLXN_22(3:0)" />
-        <signal name="XLXN_23(3:0)" />
-        <signal name="XLXN_24(3:0)" />
-        <signal name="XLXN_25(3:0)" />
         <signal name="XLXN_26(3:0)" />
-        <signal name="XLXN_28(3:0)" />
-        <signal name="XLXN_29(3:0)" />
-        <signal name="XLXN_30(3:0)" />
-        <signal name="XLXN_31(3:0)" />
-        <signal name="XLXN_32(3:0)" />
         <signal name="XLXN_33(3:0)" />
-        <signal name="XLXN_35(3:0)" />
-        <signal name="XLXN_36(3:0)" />
-        <signal name="XLXN_37(3:0)" />
-        <signal name="XLXN_38(3:0)" />
-        <signal name="XLXN_39(3:0)" />
-        <signal name="XLXN_40(3:0)" />
-        <signal name="XLXN_42(3:0)" />
-        <signal name="XLXN_43(3:0)" />
-        <signal name="XLXN_44(3:0)" />
-        <signal name="XLXN_45(3:0)" />
-        <signal name="XLXN_46(3:0)" />
-        <signal name="XLXN_47(3:0)" />
-        <signal name="XLXN_48(3:0)" />
-        <signal name="XLXN_49(3:0)" />
         <signal name="XLXN_50" />
         <signal name="LED" />
         <signal name="CLK_50MHz" />
-        <signal name="CLK_1KHz">
-        </signal>
-        <signal name="XLXN_56">
-        </signal>
-        <signal name="XLXN_57">
-        </signal>
-        <signal name="XLXN_58">
-        </signal>
-        <signal name="XLXN_59" />
-        <signal name="XLXN_60" />
+        <signal name="CLK_1KHz" />
         <signal name="XLXN_61" />
         <signal name="XLXN_63" />
         <signal name="XLXN_64" />
@@ -77,7 +42,7 @@
         <port polarity="Output" name="LED" />
         <port polarity="Input" name="CLK_50MHz" />
         <blockdef name="Cnt9999">
-            <timestamp>2016-5-1T8:5:44</timestamp>
+            <timestamp>2016-5-1T11:35:56</timestamp>
             <rect width="256" x="64" y="-256" height="256" />
             <line x2="0" y1="-224" y2="-224" x1="64" />
             <line x2="0" y1="-128" y2="-128" x1="64" />
@@ -92,7 +57,7 @@
             <line x2="384" y1="-32" y2="-32" x1="320" />
         </blockdef>
         <blockdef name="MuxDisplay">
-            <timestamp>2016-5-1T8:11:16</timestamp>
+            <timestamp>2016-5-1T11:36:5</timestamp>
             <rect width="64" x="0" y="20" height="24" />
             <line x2="0" y1="32" y2="32" x1="64" />
             <rect width="64" x="0" y="84" height="24" />
@@ -111,13 +76,13 @@
             <rect width="256" x="64" y="-256" height="512" />
         </blockdef>
         <blockdef name="StepDown1KHz">
-            <timestamp>2016-5-1T8:11:0</timestamp>
+            <timestamp>2016-5-1T11:36:13</timestamp>
             <rect width="256" x="64" y="-64" height="64" />
             <line x2="0" y1="-32" y2="-32" x1="64" />
             <line x2="384" y1="-32" y2="-32" x1="320" />
         </blockdef>
         <blockdef name="Time_Lap_Lach">
-            <timestamp>2016-5-1T8:11:27</timestamp>
+            <timestamp>2016-5-1T11:36:23</timestamp>
             <line x2="0" y1="32" y2="32" x1="64" />
             <line x2="0" y1="96" y2="96" x1="64" />
             <rect width="64" x="0" y="148" height="24" />
@@ -140,7 +105,7 @@
             <rect width="384" x="64" y="-256" height="640" />
         </blockdef>
         <blockdef name="ToggleButton">
-            <timestamp>2016-5-1T8:11:34</timestamp>
+            <timestamp>2016-5-1T11:36:35</timestamp>
             <rect width="256" x="64" y="-192" height="192" />
             <line x2="0" y1="-160" y2="-160" x1="64" />
             <line x2="0" y1="-32" y2="-32" x1="64" />
@@ -149,7 +114,7 @@
             <line x2="384" y1="-32" y2="-32" x1="320" />
         </blockdef>
         <blockdef name="rand_gen">
-            <timestamp>2016-5-1T8:11:41</timestamp>
+            <timestamp>2016-5-1T11:35:47</timestamp>
             <rect width="320" x="64" y="-128" height="128" />
             <line x2="0" y1="-96" y2="-96" x1="64" />
             <line x2="0" y1="-32" y2="-32" x1="64" />
@@ -157,7 +122,7 @@
             <line x2="448" y1="-96" y2="-96" x1="384" />
         </blockdef>
         <blockdef name="reaction_game">
-            <timestamp>2016-5-1T8:12:0</timestamp>
+            <timestamp>2016-5-1T11:37:0</timestamp>
             <rect width="368" x="64" y="-576" height="576" />
             <line x2="0" y1="-544" y2="-544" x1="64" />
             <line x2="0" y1="-480" y2="-480" x1="64" />
@@ -203,12 +168,12 @@
         <block symbolname="MuxDisplay" name="mux_display">
             <blockpin signalname="CLK_1KHz" name="CLK_1K" />
             <blockpin name="DOTS(3:0)" />
-            <blockpin signalname="AN(3:0)" name="AN(3:0)" />
-            <blockpin signalname="SEG(7:0)" name="SEG(7:0)" />
             <blockpin signalname="XLXN_1(3:0)" name="BCD1(3:0)" />
             <blockpin signalname="XLXN_2(3:0)" name="BCD2(3:0)" />
             <blockpin signalname="XLXN_3(3:0)" name="BCD3(3:0)" />
             <blockpin signalname="XLXN_4(3:0)" name="BCD4(3:0)" />
+            <blockpin signalname="AN(3:0)" name="AN(3:0)" />
+            <blockpin signalname="SEG(7:0)" name="SEG(7:0)" />
         </block>
         <block symbolname="Time_Lap_Lach" name="time_lap_latch">
             <blockpin signalname="XLXN_50" name="LAP" />
@@ -387,8 +352,7 @@
             <wire x2="176" y1="1456" y2="1456" x1="160" />
             <wire x2="720" y1="560" y2="560" x1="160" />
             <wire x2="848" y1="560" y2="560" x1="720" />
-            <wire x2="1224" y1="560" y2="560" x1="848" />
-            <wire x2="1232" y1="560" y2="560" x1="1224" />
+            <wire x2="1232" y1="560" y2="560" x1="848" />
             <wire x2="2720" y1="560" y2="560" x1="1232" />
             <wire x2="2720" y1="560" y2="832" x1="2720" />
             <wire x2="2848" y1="832" y2="832" x1="2720" />

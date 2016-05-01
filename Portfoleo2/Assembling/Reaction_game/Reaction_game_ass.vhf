@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : Reaction_game_ass.vhf
--- /___/   /\     Timestamp : 05/01/2016 13:10:55
+-- /___/   /\     Timestamp : 05/01/2016 14:12:58
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -80,12 +80,12 @@ architecture BEHAVIORAL of Reaction_game_ass is
    component MuxDisplay
       port ( CLK_1K : in    std_logic; 
              DOTS   : in    std_logic_vector (3 downto 0); 
-             AN     : out   std_logic_vector (3 downto 0); 
-             SEG    : out   std_logic_vector (7 downto 0); 
              BCD1   : in    std_logic_vector (3 downto 0); 
              BCD2   : in    std_logic_vector (3 downto 0); 
              BCD3   : in    std_logic_vector (3 downto 0); 
-             BCD4   : in    std_logic_vector (3 downto 0));
+             BCD4   : in    std_logic_vector (3 downto 0); 
+             AN     : out   std_logic_vector (3 downto 0); 
+             SEG    : out   std_logic_vector (7 downto 0));
    end component;
    
    component rand_gen

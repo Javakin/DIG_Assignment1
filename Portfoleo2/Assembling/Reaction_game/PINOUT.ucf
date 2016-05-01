@@ -1,0 +1,42 @@
+# clock
+NET "CLK_50MHz"			LOC = "B8";
+
+# Buttons
+NET "START" 		LOC = "B18";
+NET "CLEAR"			LOC = "D18";
+NET "HISCORE"		LOC = "E18";
+
+# LED's
+#NET "LED<7>" 	LOC = "J14";
+#NET "LED<6>" 	LOC = "J15";
+#NET "LED<5>" 	LOC = "K15";
+#NET "LED<4>" 	LOC = "K14";
+#NET "LED<3>" 	LOC = "E17";
+#NET "LED<2>" 	LOC = "P15";
+#NET "LED<1>" 	LOC = "F4";
+NET "LED" 	LOC = "R4";
+
+
+# Anode's
+NET "AN<0>"		LOC = "F17";
+NET "AN<1>"		LOC = "H17";
+NET "AN<2>"		LOC = "C18";
+NET "AN<3>"		LOC = "F15";
+
+
+# Kathodes from a to g
+NET "SEG<6>"	LOC = "L18";
+
+NET "SEG<5>"	LOC = "F18";
+
+NET "SEG<4>"	LOC = "D17";
+
+NET "SEG<3>"	LOC = "D16";
+
+NET "SEG<2>"	LOC = "G14";
+
+NET "SEG<1>"	LOC = "J17";
+
+NET "SEG<0>"	LOC = "H14";
+
+NET "SEG<7>"	LOC = "C17";
