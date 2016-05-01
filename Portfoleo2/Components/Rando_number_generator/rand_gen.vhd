@@ -62,8 +62,8 @@ PROCESS(CLK)
 ----------------------------------------------------------------------------------
 
 
---RAND_NUMB <= "0" & current_number(14 downto 13) & "1" & current_number(11 downto 0);
-RAND_NUMB <= "00000000" & current_number(7 downto 0);
+RAND_NUMB <= "0" & current_number(14 downto 13) & "1" & current_number(11 downto 0);
+--RAND_NUMB <= "00000000" & current_number(7 downto 0);
 end Behavioral;
 
 
