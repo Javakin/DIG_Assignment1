@@ -21,6 +21,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -35,7 +36,6 @@ use ieee.std_logic_unsigned.all;
 ----------------------------------------------------------------------------------
 entity rand_gen is
     Port ( ST_TOG 	: in  STD_LOGIC;
-          -- ST_DEB 	: in  STD_LOGIC;
 			  CLK 		: in  STD_LOGIC;
            RAND_NUMB : out  STD_LOGIC_VECTOR (15 downto 0)
 			  );
@@ -54,13 +54,15 @@ PROCESS(CLK)
 	BEGIN
 		if rising_edge(CLK) and ST_TOG = '0' then
 			current_number <= current_number + 2451;
+			
 		end if;
 	END PROCESS;
 
 -- Set output
 ----------------------------------------------------------------------------------
-RAND_NUMB <= current_number;
 
+
+RAND_NUMB <= "0" & current_number(14 downto 13) & "1" & current_number(11 downto 0);
 end Behavioral;
 
 

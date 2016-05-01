@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "D:/Git/DIG_Portfoleo2/Portfoleo2/Components/Rando_number_generator/TEST_random_number_generader.vhd";
+static const char *ng0 = "D:/Git/DIG_Assignment1/Portfoleo2/Components/Rando_number_generator/TEST_random_number_generader.vhd";
 
 
 
