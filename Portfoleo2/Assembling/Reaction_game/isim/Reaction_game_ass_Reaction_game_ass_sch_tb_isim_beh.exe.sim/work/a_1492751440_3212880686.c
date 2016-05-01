@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "D:/Git/DIG_Assignment1/Portfoleo2/Assembling/Reaction_game/ToggleButton.vhd";
+static const char *ng0 = "D:/Git/DIG_Assignment1/Portfoleo2/Components/ToggleButton/ToggleButton.vhd";
 extern char *IEEE_P_2592010699;
 
 unsigned char ieee_p_2592010699_sub_1744673427_503743352(char *, char *, unsigned int , unsigned int );
@@ -129,7 +129,7 @@ static void work_a_1492751440_3212880686_p_1(char *t0)
 LAB0:    xsi_set_current_line(67, ng0);
     t1 = (t0 + 1832U);
     t2 = *((char **)t1);
-    t1 = (t0 + 10000);
+    t1 = (t0 + 9976);
     t4 = 1;
     if (7U == 7U)
         goto LAB5;
@@ -203,7 +203,7 @@ static void work_a_1492751440_3212880686_p_2(char *t0)
 LAB0:    xsi_set_current_line(68, ng0);
     t1 = (t0 + 1832U);
     t2 = *((char **)t1);
-    t1 = (t0 + 10007);
+    t1 = (t0 + 9983);
     t4 = 1;
     if (7U == 7U)
         goto LAB5;

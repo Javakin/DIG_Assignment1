@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "D:/Git/DIG_Assignment1/Portfoleo2/Assembling/Reaction_game/reaction_game.vhd";
+static const char *ng0 = "D:/Git/DIG_Assignment1/Portfoleo2/Components/Reaction_game/reaction_game.vhd";
 extern char *IEEE_P_2592010699;
 
 unsigned char ieee_p_2592010699_sub_1744673427_503743352(char *, char *, unsigned int , unsigned int );

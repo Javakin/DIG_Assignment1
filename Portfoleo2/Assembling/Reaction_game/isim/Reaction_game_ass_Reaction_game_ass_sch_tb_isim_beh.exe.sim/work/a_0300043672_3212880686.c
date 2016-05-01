@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "D:/Git/DIG_Assignment1/Portfoleo2/Assembling/Reaction_game/StepDown1KHz.vhd";
+static const char *ng0 = "D:/Git/DIG_Assignment1/Portfoleo2/Components/StepDown1KHz/StepDown1KHz.vhd";
 extern char *IEEE_P_2592010699;
 extern char *IEEE_P_3620187407;
 
@@ -71,8 +71,8 @@ LAB1:    return;
 LAB2:    xsi_set_current_line(54, ng0);
     t3 = (t0 + 1352U);
     t4 = *((char **)t3);
-    t3 = (t0 + 5436U);
-    t5 = (t0 + 5488);
+    t3 = (t0 + 5428U);
+    t5 = (t0 + 5480);
     t8 = (t7 + 0U);
     t9 = (t8 + 0U);
     *((int *)t9) = 0;
@@ -124,7 +124,7 @@ LAB6:    goto LAB3;
 LAB5:    xsi_set_current_line(55, ng0);
     t9 = (t0 + 1352U);
     t14 = *((char **)t9);
-    t9 = (t0 + 5436U);
+    t9 = (t0 + 5428U);
     t15 = ieee_p_3620187407_sub_436279890_3965413181(IEEE_P_3620187407, t13, t14, t9, 1);
     t16 = (t13 + 12U);
     t11 = *((unsigned int *)t16);

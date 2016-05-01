@@ -18,5 +18,5 @@ Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
 Compiled 8 VHDL Units
 Built simulation executable D:/Git/DIG_Assignment1/Portfoleo2/Components/Rando_number_generator/TEST_random_number_generader_isim_beh.exe
-Fuse Memory Usage: 36272 KB
+Fuse Memory Usage: 36296 KB
 Fuse CPU Usage: 796 ms

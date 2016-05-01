@@ -2,14 +2,14 @@ Command line:
    TEST_random_number_generader_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  52774
+     -socket  53095
 
-Sun May 01 12:26:30 2016
+Sun May 01 13:42:42 2016
 
 
- Elaboration Time: 0.1875 sec
+ Elaboration Time: 0.15625 sec
 
- Current Memory Usage: 868.024 Meg
+ Current Memory Usage: 1023.74 Meg
 
  Total Signals          : 7
  Total Nets             : 34
@@ -21,9 +21,9 @@ Sun May 01 12:26:30 2016
  Total Scalar Nets and Variables : 536
 Total Line Count : 11
 
- Total Simulation Time: 0.484375 sec
+ Total Simulation Time: 0.1875 sec
 
- Current Memory Usage: 867.992 Meg
+ Current Memory Usage: 1023.74 Meg
 
-Sun May 01 12:28:23 2016
+Sun May 01 13:43:10 2016
 
