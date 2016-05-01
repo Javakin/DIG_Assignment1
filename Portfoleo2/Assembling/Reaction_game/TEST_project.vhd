@@ -66,14 +66,14 @@ BEGIN
 -- *** Test Bench - User Defined Section ***
    tb : PROCESS
    BEGIN
-      wait for 500 ns;
+      wait for 5 ms;
 		START <= '1';
 		
-		wait for 10 ms; 
+		wait for 20 ms; 
 		START <= '0';
 		
 		-- game is now running
-		wait for 100 ms;
+		wait for 150 ms;
 		START <= '1';
 		wait for 10 ms;
 		START <= '0';
