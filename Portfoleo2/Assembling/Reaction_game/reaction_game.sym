@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="reaction_game">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2016-5-1T11:37:0</timestamp>
+    <timestamp>2016-5-1T17:14:48</timestamp>
     <pin polarity="Input" x="0" y="-544" name="START_DEBOUNCE" />
     <pin polarity="Input" x="0" y="-480" name="START_TOGGLE" />
     <pin polarity="Input" x="0" y="-416" name="CLEAR" />

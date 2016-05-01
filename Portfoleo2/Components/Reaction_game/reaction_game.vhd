@@ -55,7 +55,7 @@ end reaction_game;
 architecture Behavioral of reaction_game is
 -- Define signals
 ----------------------------------------------------------------------------------
-signal tout : STD_LOGIC_VECTOR (15 downto 0) := (others => '1');
+signal tout : STD_LOGIC_VECTOR (15 downto 0) := "1001100110011001";
 signal tin  : STD_LOGIC_VECTOR (15 downto 0);
 signal btn	: STD_LOGIC_VECTOR (1 downto 0);
 signal state : STD_LOGIC_VECTOR (2 downto 0) := "001";

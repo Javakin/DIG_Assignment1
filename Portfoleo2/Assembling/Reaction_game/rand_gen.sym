@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="rand_gen">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2016-5-1T11:35:47</timestamp>
+    <timestamp>2016-5-1T17:4:38</timestamp>
     <pin polarity="Input" x="0" y="-96" name="ST_TOG" />
     <pin polarity="Input" x="0" y="-32" name="CLK" />
     <pin polarity="Output" x="448" y="-96" name="RAND_NUMB(15:0)" />
