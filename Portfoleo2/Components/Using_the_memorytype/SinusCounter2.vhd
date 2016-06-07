@@ -15,7 +15,7 @@ end SinusCounter2;
 
 architecture Behavioral of SinusCounter2 is
    Signal Counter: STD_LOGIC_VECTOR (4 downto 0) := (others=>'0');
-	Signal Enable:  STD_LOGIC;
+	Signal Enable:  STD_LOGIC := '0';
 begin
    ------------------ Clock scale process -------------------------- 
    process( Clk)
@@ -32,12 +32,12 @@ begin
 				   Scale := 5000000;
 				end if;
 			end if;
-		end if;
+		end if; 
 	end process;
    ------------------ Sinus counter ------------------------------
 	Adr <= Counter;
 	
-   process( Clk)
+   process( Clk) 
 	begin
 	   if Rising_edge( Clk) then
 		   if Enable = '1' then

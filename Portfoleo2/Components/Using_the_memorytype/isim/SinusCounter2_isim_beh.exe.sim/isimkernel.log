@@ -1,0 +1,29 @@
+Command line:
+   SinusCounter2_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  50004
+
+Tue Jun 07 16:38:34 2016
+
+
+ Elaboration Time: 0.171875 sec
+
+ Current Memory Usage: 1023.6 Meg
+
+ Total Signals          : 7
+ Total Nets             : 15
+ Total Signal Drivers   : 5
+ Total Blocks           : 4
+ Total Primitive Blocks : 4
+ Total Processes        : 3
+ Total Traceable Variables  : 10
+ Total Scalar Nets and Variables : 393
+Total Line Count : 19
+
+ Total Simulation Time: 0.203125 sec
+
+ Current Memory Usage: 1023.57 Meg
+
+Tue Jun 07 16:39:55 2016
+

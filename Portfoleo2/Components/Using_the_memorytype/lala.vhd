@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer:
 --
--- Create Date:   16:06:33 06/07/2016
+-- Create Date:   16:20:58 06/07/2016
 -- Design Name:   
--- Module Name:   D:/Git/DIG_Assignment1/Portfoleo2/Components/Using_the_memorytype/TEST_SinCounter2.vhd
+-- Module Name:   D:/Git/DIG_Assignment1/Portfoleo2/Components/Using_the_memorytype/lala.vhd
 -- Project Name:  Using_the_memorytype
 -- Target Device:  
 -- Tool versions:  
@@ -32,10 +32,10 @@ USE ieee.std_logic_1164.ALL;
 -- arithmetic functions with Signed or Unsigned values
 --USE ieee.numeric_std.ALL;
  
-ENTITY TEST_SinCounter2 IS
-END TEST_SinCounter2;
+ENTITY lala IS
+END lala;
  
-ARCHITECTURE behavior OF TEST_SinCounter2 IS 
+ARCHITECTURE behavior OF lala IS 
  
     -- Component Declaration for the Unit Under Test (UUT)
  
@@ -80,17 +80,22 @@ BEGIN
    begin
 		Clk <= '0';
 		wait for Clk_period/2;
-		Clk <= '0';
+		Clk <= '1';
 		wait for Clk_period/2;
    end process;
  
 
    -- Stimulus process
---   stim_proc: process
---   begin		
---      -- hold reset state for 100 ns.
---		wait for 100 ns;
---		Clk <= '0';
---	end process;
+   stim_proc: process
+   begin		
+      -- hold reset state for 100 ns.
+      wait for 100 ns;	
+
+      wait for Clk_period*10;
+
+      -- insert stimulus here 
+
+      wait;
+   end process;
 
 END;

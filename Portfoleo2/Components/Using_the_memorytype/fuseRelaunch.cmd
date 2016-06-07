@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "D:/Git/DIG_Assignment1/Portfoleo2/Components/Using_the_memorytype/SinusCounter2_isim_beh.exe" -prj "D:/Git/DIG_Assignment1/Portfoleo2/Components/Using_the_memorytype/SinusCounter2_beh.prj" "work.SinusCounter2" 
