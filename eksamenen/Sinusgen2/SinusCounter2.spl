@@ -1,0 +1,8 @@
+[Inputs]
+Clk
+Sw0
+[Outputs]
+=Adr[4:0]=
+[BiDir]
+UPdown
+Negate

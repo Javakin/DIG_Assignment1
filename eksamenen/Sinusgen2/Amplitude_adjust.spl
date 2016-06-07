@@ -1,0 +1,6 @@
+[Inputs]
+Negate
+=RomData[8:0]=
+[Outputs]
+=PCM[9:0]=
+[BiDir]

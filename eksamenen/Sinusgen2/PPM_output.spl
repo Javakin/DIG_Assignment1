@@ -1,0 +1,6 @@
+[Inputs]
+Clk
+=PCM[9:0]=
+[Outputs]
+PPM
+[BiDir]

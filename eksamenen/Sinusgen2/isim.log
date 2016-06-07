@@ -1,0 +1,36 @@
+ command line:
+   ./Test1_isim_par.exe
+     -sdfmax  /UUT/=netgen/par/SinusGenerator_timesim.sdf
+     -sdfroot  /UUT
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  2307
+
+Wed Nov 19 14:22:06 2008
+
+Total Line Count : 2500
+
+ Elaboration time : 0.0625 sec.
+
+ Estimate current memory usage : 133.882 Meg. 
+
+ Total Signals          : 6178
+ Total Nets             : 3571
+ Total Signal Drivers   : 3533
+ Total Blocks           : 1725
+ Total Primitive Blocks : 852
+ Total Processes        : 3534
+ Total Traceable Variables  : 7930
+ Total Scalar Nets and Variables : 25738
+ntrace select -o on -m / -l this 
+ntrace start 
+isimrun 1000 ns 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+
+ Simulation time 0.59375 sec.
+
+ Estimate current memory usage : 140.173 Meg. 
+
+Wed Nov 19 14:26:25 2008
+

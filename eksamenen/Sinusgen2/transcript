@@ -1,0 +1,61 @@
+# Reading C:/Modeltech_xe_starter/tcl/vsim/pref.tcl 
+# do {Test1.tdo} 
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim XE III vcom 6.2g Compiler 2007.02 Feb 22 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package vital_timing
+# -- Loading package vcomponents
+# -- Loading package vital_primitives
+# -- Loading package textio
+# -- Loading package vpackage
+# -- Compiling entity sinusgenerator
+# -- Compiling architecture structure of sinusgenerator
+# Model Technology ModelSim XE III vcom 6.2g Compiler 2007.02 Feb 22 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package vcomponents
+# -- Loading package numeric_std
+# -- Loading package textio
+# -- Loading package std_logic_textio
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Compiling entity test1
+# -- Compiling architecture testbench_arch of test1
+# vsim -lib work -sdfmax /UUT=netgen/par/SinusGenerator_timesim.sdf -t 1ps Test1 
+# Loading C:\Modeltech_xe_starter\win32xoem/../std.standard
+# Loading C:\Modeltech_xe_starter\win32xoem/../ieee.std_logic_1164(body)
+# Loading C:\Modeltech_xe_starter\win32xoem/../xilinx/vhdl/unisim.vcomponents
+# Loading C:\Modeltech_xe_starter\win32xoem/../ieee.numeric_std(body)
+# Loading C:\Modeltech_xe_starter\win32xoem/../std.textio(body)
+# Loading C:\Modeltech_xe_starter\win32xoem/../ieee.std_logic_textio(body)
+# Loading C:\Modeltech_xe_starter\win32xoem/../ieee.std_logic_arith(body)
+# Loading C:\Modeltech_xe_starter\win32xoem/../ieee.std_logic_unsigned(body)
+# Loading work.test1(testbench_arch)
+# Loading C:\Modeltech_xe_starter\win32xoem/../vital2000.vital_timing(body)
+# Loading C:\Modeltech_xe_starter\win32xoem/../xilinx/vhdl/simprim.vcomponents
+# Loading C:\Modeltech_xe_starter\win32xoem/../vital2000.vital_primitives(body)
+# Loading C:\Modeltech_xe_starter\win32xoem/../xilinx/vhdl/simprim.vpackage(body)
+# Loading work.sinusgenerator(structure)
+# Loading C:\Modeltech_xe_starter\win32xoem/../xilinx/vhdl/simprim.x_one(x_one_v)
+# Loading C:\Modeltech_xe_starter\win32xoem/../xilinx/vhdl/simprim.x_zero(x_zero_v)
+# Loading C:\Modeltech_xe_starter\win32xoem/../xilinx/vhdl/simprim.x_buf(x_buf_v)
+# Loading C:\Modeltech_xe_starter\win32xoem/../xilinx/vhdl/simprim.x_xor2(x_xor2_v)
+# Loading C:\Modeltech_xe_starter\win32xoem/../xilinx/vhdl/simprim.x_mux2(x_mux2_v)
+# Loading C:\Modeltech_xe_starter\win32xoem/../xilinx/vhdl/simprim.x_lut4(x_lut4_v)
+# Loading C:\Modeltech_xe_starter\win32xoem/../xilinx/vhdl/simprim.x_and2(x_and2_v)
+# Loading C:\Modeltech_xe_starter\win32xoem/../xilinx/vhdl/simprim.x_obuf(x_obuf_v)
+# Loading C:\Modeltech_xe_starter\win32xoem/../xilinx/vhdl/simprim.x_bufgmux(x_bufgmux_v)
+# Loading C:\Modeltech_xe_starter\win32xoem/../xilinx/vhdl/simprim.x_inv(x_inv_v)
+# Loading C:\Modeltech_xe_starter\win32xoem/../xilinx/vhdl/simprim.x_sff(x_sff_v)
+# Loading C:\Modeltech_xe_starter\win32xoem/../xilinx/vhdl/simprim.x_ff(x_ff_v)
+# Loading C:\Modeltech_xe_starter\win32xoem/../xilinx/vhdl/simprim.x_roc(x_roc_v)
+# Loading C:\Modeltech_xe_starter\win32xoem/../xilinx/vhdl/simprim.x_toc(x_toc_v)
+# ** Warning: Design size of 12039 statements or 0 non-Xilinx leaf instances exceeds ModelSim XE-Starter recommended capacity.
+# Expect performance to be quite adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Region: /test1  File: Test1.vhw
+# .main_pane.mdi.interior.cs.vm.paneset.cli_0.wf.clip.cs.pw.wf
+# .main_pane.workspace.interior.cs.nb.canvas.notebook.cs.page2.cs
+# .main_pane.signals.interior.cs
+run 10000ns

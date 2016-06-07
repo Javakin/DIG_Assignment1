@@ -1,0 +1,83 @@
+m255
+13
+cModel Technology
+dD:\XiLinx_Projekter\BASYS_PROJECTS\EXER\EXER5xSinusGen\Sinusgen2
+Esinusgenerator
+w1227100726
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP vital2000 vital_primitives P<o@__YgakiANKimF[boN3
+DP simprim vpackage 93O841:Yon0f2h3?`bcOH1
+DP vital2000 vital_timing S^n>oJ2GS[H5aTKMo9OkE0
+DP simprim vcomponents ZiVl2PmP9^@P;@K2113KL3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8netgen/par/SinusGenerator_timesim.vhd
+Fnetgen/par/SinusGenerator_timesim.vhd
+l0
+L41
+V:S4>XZAmTV3QMKbIZS_U10
+OX;C;6.2g;35
+31
+o-explicit -93 -O0
+tExplicit 1
+Astructure
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP vital2000 vital_primitives P<o@__YgakiANKimF[boN3
+DP simprim vpackage 93O841:Yon0f2h3?`bcOH1
+DP vital2000 vital_timing S^n>oJ2GS[H5aTKMo9OkE0
+DP simprim vcomponents ZiVl2PmP9^@P;@K2113KL3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work sinusgenerator :S4>XZAmTV3QMKbIZS_U10
+l807
+L50
+VgeZF`D<aT<<[4VYF1R>FU2
+OX;C;6.2g;35
+31
+M6 ieee std_logic_1164
+M5 simprim vcomponents
+M4 vital2000 vital_timing
+M3 simprim vpackage
+M2 vital2000 vital_primitives
+M1 std textio
+o-explicit -93 -O0
+tExplicit 1
+Etest1
+w1227043744
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee std_logic_textio 8YS?iX`WD1REQG`ZRYQGB2
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DP unisim vcomponents <?bUeY?0=fR?kjDbKZ<7I2
+8Test1.vhw
+FTest1.vhw
+l0
+L30
+VTJ0aRnPV]C4SHPemA9[7:1
+OX;C;6.2g;35
+31
+o-explicit -93 -O0
+tExplicit 1
+Atestbench_arch
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP ieee std_logic_textio 8YS?iX`WD1REQG`ZRYQGB2
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DP unisim vcomponents <?bUeY?0=fR?kjDbKZ<7I2
+DE work test1 TJ0aRnPV]C4SHPemA9[7:1
+l54
+L33
+V:J=A3ZSSgMY:H8KRA5bQc2
+OX;C;6.2g;35
+31
+M7 unisim vcomponents
+M6 ieee std_logic_1164
+M5 ieee numeric_std
+M4 ieee std_logic_textio
+M3 std textio
+M2 ieee std_logic_arith
+M1 ieee std_logic_unsigned
+o-explicit -93 -O0
+tExplicit 1

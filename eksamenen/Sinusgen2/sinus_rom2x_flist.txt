@@ -1,0 +1,12 @@
+# Output products list for <sinus_rom2x>
+sinus_rom2x.asy
+sinus_rom2x.mif
+sinus_rom2x.ngc
+sinus_rom2x.sym
+sinus_rom2x.v
+sinus_rom2x.veo
+sinus_rom2x.vhd
+sinus_rom2x.vho
+sinus_rom2x.xco
+sinus_rom2x_flist.txt
+sinus_rom2x_xmdf.tcl
